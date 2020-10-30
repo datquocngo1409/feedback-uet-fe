@@ -1,0 +1,21 @@
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Position Column -->
+    <ng-container *ngFor="let field of displayedColumns" matColumnDef="{{field}}">
+        <mat-header-cell *matHeaderCellDef>{{field}}</mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element[field]}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="groupHeader">
+        <mat-cell class="groupHeader" *matCellDef="let group"><b>{{group.group}}</b></mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="weightHeader">
+        <mat-cell class="groupHeader" *matCellDef="let group"><b>{{group.weight}}</b></mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    <mat-row *matRowDef="let row; columns: ['groupHeader', 'weightHeader']; when: isGroup" (click)="groupHeaderClick(row)"> </mat-row>
+
+</mat-table>
