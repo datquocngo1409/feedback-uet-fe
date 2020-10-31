@@ -45,7 +45,7 @@ export class ApiService {
         });
     }
 
-    synccurrentUser() {
-        return this.http.get(environment.apiUrl + `user/current`, {});
+    synccurrentUser(username) {
+        return this.http.get(environment.apiUrl + `user/getByUsername/` + username, {});
     }
 }

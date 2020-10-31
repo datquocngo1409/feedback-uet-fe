@@ -54,8 +54,8 @@ export class AuthService {
     }
 
     isUserLogined() {
-        this.userData = JSON.parse(localStorage.getItem('userProfile'));
-        if (this.userData) {
+        const token = localStorage.getItem('token');
+        if (token) {
             this.isLoggedIn = true;
             return true;
         } else {
@@ -69,7 +69,9 @@ export class AuthService {
      */
     loginUser(value) {
         this.apiService.login(value.account, value.password).subscribe((result: any) => {
-            console.log(result);
+            this.setUsername(value.account);
+            this.setToken(result.token);
+            this.setUser(value.account);
             this.toastr.success('Successfully Logged In!');
             this.router.navigate(['/']);
         }, (err) => {
@@ -111,8 +113,24 @@ export class AuthService {
      */
     logOut() {
         localStorage.removeItem('userProfile');
+        localStorage.removeItem('token');
+        localStorage.removeItem('username');
         this.isLoggedIn = false;
         this.toastr.success('Successfully logged out!');
         this.router.navigate(['/session/login']);
+    }
+
+    private setToken(token: any) {
+        localStorage.setItem('token', token);
+    }
+
+    private setUser(username) {
+        this.apiService.synccurrentUser(username).subscribe(user => {
+            localStorage.setItem('userProfile', JSON.stringify(user));
+        })
+    }
+
+    private setUsername(account: any) {
+        localStorage.setItem('username', account);
     }
 }
