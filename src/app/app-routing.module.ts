@@ -25,6 +25,9 @@ const appRoutes: Routes = [
                 path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
             },
             {
+                path: 'subject', loadChildren: () => import('./@pages/pages/subject/subject.module').then(m => m.SubjectModule)
+            },
+            {
                 path: 'test',
                 component: TestComponent
             }

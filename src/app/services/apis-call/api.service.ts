@@ -30,4 +30,8 @@ export class API {
             password: password
         });
     }
+
+    getSubjectList() {
+        return this.http.get(environment.apiUrl + `subject`, {});
+    }
 }

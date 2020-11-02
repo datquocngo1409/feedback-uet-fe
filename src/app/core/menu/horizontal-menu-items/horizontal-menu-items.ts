@@ -33,7 +33,7 @@ export class HorizontalMenuItems {
             class: 'group-title',
             icon: '',
             children: [
-                {state: 'subject', name: 'Subject', type: 'link'},
+                {state: 'subject/list', name: 'Subject', type: 'link'},
                 {state: 'subject/your', name: 'Your Subject', type: 'link'},
                 {state: 'subject/other', name: 'Other Subject', type: 'link'},
                 {state: 'subject/rated', name: 'Rated Subject', type: 'link'},
@@ -46,7 +46,7 @@ export class HorizontalMenuItems {
             class: 'group-title',
             icon: '',
             children: [
-                {state: 'teacher', name: 'Teacher', type: 'link'},
+                {state: 'teacher/list', name: 'Teacher', type: 'link'},
                 {state: 'teacher/your', name: 'Your Teacher', type: 'link'},
                 {state: 'teacher/other', name: 'Other Teacher', type: 'link'},
                 {state: 'teacher/rated', name: 'Rated Teacher', type: 'link'},

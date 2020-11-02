@@ -81,7 +81,6 @@ export class HorizontalLayoutComponent implements OnInit {
                 private activateRoute: ActivatedRoute) {
 
         const browserLang: string = translate.getBrowserLang();
-        console.log(localStorage.getItem('language'));
         translate.use(browserLang.match(/en|fr/) ? browserLang : 'en');
 
         this.tourService.initialize([{
