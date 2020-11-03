@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {SubjectService} from '../../../../services/subject/subject.service';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
+import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
+import {DialogRateComponent} from '../dialog/dialog-rate/dialog-rate.component';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
     selector: 'ms-detail-subject',
@@ -12,16 +15,26 @@ export class DetailSubjectComponent implements OnInit {
     subject;
     showDetail;
     weekNumber;
-    constructor(private subjectService: SubjectService, private route: ActivatedRoute) {
+    showComment;
+    comments;
+    dialogRef;
+
+    constructor(
+        private subjectService: SubjectService,
+        private route: ActivatedRoute,
+        private dialog: MatDialog,
+        private translate: TranslateService) {
     }
 
     ngOnInit(): void {
         this.showDetail = true;
+        this.showComment = false;
         this.weekNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+        this.comments = [{id: 1, showRep: false, rep: false}, {id: 2, showRep: false, rep: false}];
         const id = +this.route.snapshot.paramMap.get('id');
         this.subjectService.getById(id).subscribe(subject => {
             this.subject = subject;
-        })
+        });
     }
 
     ratingComponentClick(clickObj: any): void {
@@ -57,5 +70,15 @@ export class DetailSubjectComponent implements OnInit {
         } else {
             return 'right';
         }
+    }
+
+    openDialog() {
+        this.dialogRef = this.dialog.open(DialogRateComponent, {
+            width: '1000px',
+            height: '450px',
+            data: {
+                subject: this.subject
+            }
+        });
     }
 }

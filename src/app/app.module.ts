@@ -145,7 +145,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         MainComponent,
         SideBarComponent, FooterComponent,
         HorizontalLayoutComponent,
-        TestComponent
+        TestComponent,
     ],
     bootstrap: [GeneAppComponent],
     providers: [

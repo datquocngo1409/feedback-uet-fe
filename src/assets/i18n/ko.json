@@ -1,4 +1,19 @@
-{  
+{
+   "SUBJECT": {
+      "Subject": "Subject",
+      "SubjectList": "Subject List",
+      "SubjectInfomation": "Subject Infomation",
+      "Code": "Code",
+      "Name": "Name",
+      "StartDate": "Start Date",
+      "EndDate": "End Date",
+      "Teacher": "Teacher",
+      "Week": "Week",
+      "Comment": "Comment",
+      "Comments": "Comments",
+      "Replies": "Replies",
+      "Reply": "Reply"
+   },
    "Top Products" : "최고의 제품",
    "Menus (dropdowns)" : "메뉴 (드롭 다운)",
    "Cart" : "카트",
@@ -19,7 +34,7 @@
    "Tabs" : "탭",
    "Vertical Menu": "수직 메뉴",
    "Sidebar Filters" : "사이드 바 필터",
-   "Header Filters" : "헤더 필터", 
+   "Header Filters" : "헤더 필터",
    "Languages": "언어",
    "Popular Instructors": "인기 강사",
    "What you'll learn" : "배우게 될 것",
@@ -132,7 +147,7 @@
    "FILE MANAGER" : "파일 관리자",
    "DASHBOARD": "계기반",
    "SAAS": "사 아스",
-   "WEB ANALYTICS": "웹 분석",   
+   "WEB ANALYTICS": "웹 분석",
    "INBOX": "받은 편지함",
    "CHAT": "잡담",
    "CALENDAR": "달력",

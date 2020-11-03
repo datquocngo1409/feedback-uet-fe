@@ -1,4 +1,19 @@
-{ 
+{
+   "SUBJECT": {
+      "Subject": "学科",
+      "SubjectList": "主题清单",
+      "SubjectInfomation": "主题信息",
+      "Code": "码",
+      "Name": "名称",
+      "StartDate": "开始日期",
+      "EndDate": "结束日期",
+      "Teacher": "老师",
+      "Week": "周",
+      "Comment": "评论",
+      "Comments": "评论",
+      "Replies": "回覆",
+      "Reply": "回覆"
+   },
    "Top Products" : "热门产品",
    "Menus (dropdowns)" : "菜单（下拉菜单）",
    "Cart" : "大车",
@@ -19,7 +34,7 @@
    "Tabs" : "标签",
    "Vertical Menu": "垂直菜单",
    "Sidebar Filters" : "边栏过滤器",
-   "Header Filters" : "标头过滤器", 
+   "Header Filters" : "标头过滤器",
    "Languages": "语言",
    "Popular Instructors": "受欢迎的教练",
    "What you'll learn" : "你将学到什么",
@@ -128,7 +143,7 @@
    "FILE MANAGER" : "文件管理器",
    "DASHBOARD": "仪表板",
    "SAAS": "薩斯",
-   "WEB ANALYTICS": "网站分析",   
+   "WEB ANALYTICS": "网站分析",
    "INBOX": "收件箱",
    "CHAT": "聊",
    "CALENDAR": "日历",

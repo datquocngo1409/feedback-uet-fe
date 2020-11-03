@@ -1,4 +1,19 @@
-{  
+{
+   "SUBJECT": {
+      "Subject": "Subject",
+      "SubjectList": "Subject List",
+      "SubjectInfomation": "Subject Infomation",
+      "Code": "Code",
+      "Name": "Name",
+      "StartDate": "Start Date",
+      "EndDate": "End Date",
+      "Teacher": "Teacher",
+      "Week": "Week",
+      "Comment": "Comment",
+      "Comments": "Comments",
+      "Replies": "Replies",
+      "Reply": "Reply"
+   },
    "Top Products" : "מוצרים מובילים",
    "Menus (dropdowns)" : "תפריטים (תפריט נפתח)",
    "Cart" : "עגלת קניות",
@@ -19,7 +34,7 @@
    "Tabs" : "כרטיסיות",
    "Vertical Menu": "תפריט אנכי",
    "Sidebar Filters" : "מסננים לסרגל הצד",
-   "Header Filters" : "מסננים כותרת", 
+   "Header Filters" : "מסננים כותרת",
    "Languages": "שפות",
    "Popular Instructors": "מדריכים פופולריים",
    "What you'll learn" : "מה תלמד",
@@ -127,7 +142,7 @@
    "FILE MANAGER" : "מנהל קבצים",
    "DASHBOARD": "מרכז השליטה",
    "SAAS": "סאס",
-   "WEB ANALYTICS": "ניתוחי רשת",   
+   "WEB ANALYTICS": "ניתוחי רשת",
    "INBOX": "תיבת הדואר הנכנס",
    "CHAT": "צ'אט",
    "CALENDAR": "לוח שנה",

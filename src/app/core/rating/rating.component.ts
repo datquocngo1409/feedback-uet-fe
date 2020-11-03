@@ -8,6 +8,7 @@ import {Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
 export class RatingComponent implements OnInit {
     @Input() rating: number;
     @Input() isReadonly: boolean;
+    @Input() fontSize: number;
     @Input() itemId: number;
     @Output() ratingClick: EventEmitter<any> = new EventEmitter<any>();
 
@@ -17,6 +18,9 @@ export class RatingComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        if (this.fontSize === null) {
+            this.fontSize = 14;
+        }
         this.inputName = this.itemId + '_rating';
     }
 
@@ -28,5 +32,9 @@ export class RatingComponent implements OnInit {
                 rating: rating
             });
         }
+    }
+
+    getFontSize() {
+        return 'font-size: ' + this.fontSize + 'px';
     }
 }

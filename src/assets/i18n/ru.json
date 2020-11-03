@@ -1,4 +1,19 @@
-{  
+{
+   "SUBJECT": {
+      "Subject": "Subject",
+      "SubjectList": "Subject List",
+      "SubjectInfomation": "Subject Infomation",
+      "Code": "Code",
+      "Name": "Name",
+      "StartDate": "Start Date",
+      "EndDate": "End Date",
+      "Teacher": "Teacher",
+      "Week": "Week",
+      "Comment": "Comment",
+      "Comments": "Comments",
+      "Replies": "Replies",
+      "Reply": "Reply"
+   },
    "Top Products" : "Лучшие продукты",
    "Menus (dropdowns)" : "Меню (выпадающие списки)",
    "Cart" : "телега",
@@ -19,7 +34,7 @@
    "Tabs" : "Вкладки",
    "Vertical Menu": "Вертикальное меню",
    "Sidebar Filters" : "Фильтры боковой панели",
-   "Header Filters" : "Фильтры заголовка", 
+   "Header Filters" : "Фильтры заголовка",
    "Languages": "Языки",
    "Popular Instructors": "Популярные Инструкторы",
    "What you'll learn" : "Что вы узнаете",
@@ -131,7 +146,7 @@
    "FILE MANAGER" : "Файловый менеджер",
    "DASHBOARD": "Приборная доска",
    "SAAS": "саас",
-   "WEB ANALYTICS": "Веб-аналитика",   
+   "WEB ANALYTICS": "Веб-аналитика",
    "INBOX": "входящие",
    "CHAT": "чат",
    "CALENDAR": "Календарь",

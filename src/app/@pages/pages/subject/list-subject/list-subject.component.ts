@@ -4,6 +4,7 @@ import {ISubject} from '../data/subject';
 import {MatCalendar} from '@angular/material/datepicker';
 import {Moment} from 'moment';
 import {Router} from '@angular/router';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
     selector: 'ms-list-subject',
@@ -18,7 +19,7 @@ export class ListSubjectComponent implements OnInit {
     public subjectsDto: ISubject[];
     selectedDate: Moment;
 
-    constructor(private subjectService: SubjectService, private router: Router) {
+    constructor(private subjectService: SubjectService, private router: Router, private translate: TranslateService) {
     }
 
     ngOnInit(): void {

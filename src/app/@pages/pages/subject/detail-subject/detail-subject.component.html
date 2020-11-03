@@ -13,7 +13,7 @@
         </h3>
         <div class="week-list" *ngFor="let wNum of weekNumber">
             <div class="week">
-                <span class="week-text">Week {{wNum}}</span>
+                <span class="week-text">{{"SUBJECT.Week" | translate}} {{wNum}}</span>
             </div>
             <div class="week-content">
                 <ul>
@@ -35,28 +35,88 @@
     </div>
     <div *ngIf="showDetail" class="right-content">
         <h4 class="header">
-            <b>Subject Infomation: </b>
+            <b>{{"SUBJECT.SubjectInfomation" | translate}}: </b>
         </h4>
         <h5 class="field">
-            <b>Code: </b> {{subject.code}}
+            <b>{{"SUBJECT.Code" | translate}}: </b> {{subject.code}}
         </h5>
         <h5 class="field">
-            <b>Name: </b> {{subject.name}}
+            <b>{{"SUBJECT.Name" | translate}}: </b> {{subject.name}}
         </h5>
         <h5 class="field">
-            <b>Teacher: </b> {{subject.teacherName}}
+            <b>{{"SUBJECT.Teacher" | translate}}: </b> {{subject.teacherName}}
         </h5>
         <h5 class="field">
-            <b>Start Date: </b> {{subject.startDate}}
+            <b>{{"SUBJECT.StartDate" | translate}} </b> {{subject.startDate}}
         </h5>
         <h5 class="field">
-            <b>End Date: </b> {{getEndDate(subject.startDate)}}
+            <b>{{"SUBJECT.EndDate" | translate}}: </b> {{getEndDate(subject.startDate)}}
         </h5>
         <h5 class="field">
-            <div style="float: left">
-                <ms-rating [rating]='subject.rating' [itemId]='subject.id' [isReadonly]="true"></ms-rating>
-            </div>
+            <ms-rating (click)="openDialog()" [rating]='subject.rating' [itemId]='subject.id' [isReadonly]="true"></ms-rating>
         </h5>
+        <h5 class="field" class="button-show-comment">
+            <span *ngIf="showComment" (click)="showComment = !showComment"
+                  class="material-icons">keyboard_arrow_up</span>
+            <span *ngIf="!showComment" (click)="showComment = !showComment"
+                  class="material-icons">keyboard_arrow_down</span>
+            2 {{"SUBJECT.Comments" | translate}}
+        </h5>
+        <div *ngIf="showComment" class="comment-content">
+            <mat-card *ngFor="let comment of comments">
+                <mat-card-header>
+                    <mat-card-title>Ngô Quốc Đạt</mat-card-title>
+                    <mat-card-subtitle>08:22 01/11/2020</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <span>Verry Good</span>
+                    <div class="like-button">
+                        <span class="like-text">Like</span>
+                        <span class="rep-text" (click)="comment.rep = !comment.rep">Rep</span>
+                    </div>
+                    <div>
+                        <span *ngIf="comment.showRep" (click)="comment.showRep = !comment.showRep"
+                              class="material-icons cursor-poiner">keyboard_arrow_up</span>
+                        <span *ngIf="!comment.showRep" (click)="comment.showRep = !comment.showRep"
+                              class="material-icons cursor-poiner">keyboard_arrow_down</span>
+                        2 {{"SUBJECT.Replies" | translate}}
+                    </div>
+                    <div *ngIf="comment.showRep">
+                        <mat-card>
+                            <mat-card-header>
+                                <mat-card-title>Ngô Quốc Đạt</mat-card-title>
+                                <mat-card-subtitle>12:40 01/11/2020</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <span>Verry Good</span>
+                                <div class="like-button">
+                                    <span class="like-text">Like</span>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                        <mat-card>
+                            <mat-card-header>
+                                <mat-card-title>Ngô Quốc Đạt</mat-card-title>
+                                <mat-card-subtitle>15:30 01/11/2020</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <span>Verry Good</span>
+                                <div class="like-button">
+                                    <span class="like-text">Like</span>
+                                </div>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                    <div *ngIf="comment.rep">
+                        <mat-card>
+                            <textarea mat-autosize rows='2' class="input-comment"></textarea>
+                            <div class="like-button comment-button">
+                                <div class="btn btn-primary">{{"SUBJECT.Comment" | translate}}</div>
+                            </div>
+                        </mat-card>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
     </div>
-
 </div>

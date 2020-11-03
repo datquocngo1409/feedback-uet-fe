@@ -23,9 +23,9 @@ export class LanguageDropDownComponent implements OnInit {
             value: 'fr'
         },
         {
-            img: 'assets/img/he.png',
-            name: 'Hebrew',
-            value: 'he'
+            img: 'assets/img/vietnam.png',
+            name: 'Vietnam',
+            value: 'vi'
         },
         {
             img: 'assets/img/ru.png',

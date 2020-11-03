@@ -35,7 +35,6 @@
 .right-content {
   float: left;
   width: 30%;
-  background-color: white;
   border-radius: 30px;
   padding: 30px;
 }
@@ -54,7 +53,7 @@
 
 .week-content {
   padding: 10px;
-  width: 80%;
+  width: 90%;
   margin-left: 20px;
 }
 
@@ -73,3 +72,61 @@
   margin-top: 10px;
   width: 100%;
 }
+
+.button-show-comment {
+  cursor: pointer;
+  margin-top: 80px;
+}
+
+.comment-content {
+  width: 100%;
+}
+
+.like-button {
+  margin-top: auto;
+  margin-bottom: 0;
+  margin-right: 0;
+  float: right;
+}
+
+.comment-button {
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-right: 0;
+  float: right;
+}
+
+.like-text {
+  cursor: pointer;
+  color: dimgrey;
+  font-weight: bold;
+}
+
+.liked-text {
+  cursor: pointer;
+  color: #448AFF;
+  font-weight: bold;
+}
+
+.rep-text {
+  cursor: pointer;
+  color: dimgrey;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.cursor-poiner {
+  cursor: pointer;
+}
+
+.input-comment {
+  width: 100%;
+  border: none;
+  /* box-sizing: padding-box; */
+  overflow:hidden;
+  /* demo only: */
+  font-size:14px;
+  display:block;
+  border-radius:10px;
+}
+

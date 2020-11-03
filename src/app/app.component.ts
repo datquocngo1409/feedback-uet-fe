@@ -10,7 +10,7 @@ import {TranslateService} from '@ngx-translate/core';
 
 export class GeneAppComponent {
     constructor(translate: TranslateService) {
-        translate.addLangs(['en', 'fr', 'he', 'ru', 'ar', 'zh', 'de', 'es', 'ja', 'ko', 'it', 'hu']);
+        translate.addLangs(['en', 'fr', 'vi', 'he', 'ru', 'ar', 'zh', 'de', 'es', 'ja', 'ko', 'it', 'hu']);
         translate.setDefaultLang('en');
 
         let language: string = translate.getBrowserLang();

@@ -1,0 +1,29 @@
+<div class="main">
+    <h4 class="header">
+        <b>Rate Subject [{{subjectData.code}}] {{subjectData.name}}: </b>
+    </h4>
+    <h5 class="field">
+        <b>{{"SUBJECT.Code" | translate}}: </b> {{subjectData.code}}
+    </h5>
+    <h5 class="field">
+        <b>{{"SUBJECT.Name" | translate}}: </b> {{subjectData.name}}
+    </h5>
+    <h5 class="field">
+        <b>{{"SUBJECT.Teacher" | translate}}: </b> {{subjectData.teacherName}}
+    </h5>
+    <h5 class="field">
+        <b>{{"SUBJECT.StartDate" | translate}} </b> {{subjectData.startDate}}
+    </h5>
+    <h5 class="field">
+        <b>{{"SUBJECT.EndDate" | translate}}: </b> {{getEndDate(subjectData.startDate)}}
+    </h5>
+    <div class="rating-container">
+        <ms-rating-big [rating]='subjectData.rating' [itemId]='subjectData.id' [isReadonly]="false"></ms-rating-big>
+    </div>
+    <div class="pad-wrap justify-content-end margin-top-100px">
+        <mat-card-actions class="float-right">
+            <button mat-raised-button color="warn" type="button" (click)="onCancel()">{{'BUTTON.Cancel'|translate}}</button>
+            <button mat-raised-button color="primary" type="submit">{{'BUTTON.Rate'|translate}}</button>
+        </mat-card-actions>
+    </div>
+</div>

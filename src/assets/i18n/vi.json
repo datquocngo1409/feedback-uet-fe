@@ -1,4 +1,19 @@
 {
+   "SUBJECT": {
+      "Subject": "Môn học",
+      "SubjectList": "Danh sách môn học",
+      "SubjectInfomation": "Thông tin môn học",
+      "Code": "Mã môn học",
+      "Name": "Tên môn học",
+      "StartDate": "Ngày bắt đầu",
+      "EndDate": "Ngày kết thúc",
+      "Teacher": "Giảng viên",
+      "Week": "Tuần",
+      "Comment": "Bình luận",
+      "Comments": "Bình luận",
+      "Replies": "Phản hồi",
+      "Reply": "Phản hồi"
+   },
     "OPTION": {
        "Yes": "Có",
        "No": "Không",
@@ -624,4 +639,3 @@
        }
      }
  }
- 

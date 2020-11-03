@@ -1,4 +1,19 @@
-{  
+{
+   "SUBJECT": {
+      "Subject": "Subject",
+      "SubjectList": "Subject List",
+      "SubjectInfomation": "Subject Infomation",
+      "Code": "Code",
+      "Name": "Name",
+      "StartDate": "Start Date",
+      "EndDate": "End Date",
+      "Teacher": "Teacher",
+      "Week": "Week",
+      "Comment": "Comment",
+      "Comments": "Comments",
+      "Replies": "Replies",
+      "Reply": "Reply"
+   },
    "Top Products" : "Prodotti migliori",
    "Menus (dropdowns)" : "Menu (menu a discesa)",
    "Cart" : "Carrello",
@@ -19,7 +34,7 @@
    "Tabs" : "Tabs",
    "Vertical Menu": "Menu verticale",
    "Sidebar Filters" : "Filtri della barra laterale",
-   "Header Filters" : "Filtri di intestazione", 
+   "Header Filters" : "Filtri di intestazione",
    "Languages": "Le lingue",
    "Popular Instructors": "Istruttori popolari",
    "What you'll learn" : "Cosa imparerai",
@@ -130,7 +145,7 @@
    "FILE MANAGER" : "File Manager",
    "DASHBOARD": "Cruscotto",
    "SAAS": "saas",
-   "WEB ANALYTICS": "analisi web",   
+   "WEB ANALYTICS": "analisi web",
    "INBOX": "Posta in arrivo",
    "CHAT": "Chiacchierare",
    "CALENDAR": "Calendario",

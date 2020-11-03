@@ -1,4 +1,5 @@
 {
+
    "Top Products" : "Productos Top",
    "Menus (dropdowns)" : "Menús (desplegables)",
    "Cart" : "Carro",
@@ -19,7 +20,7 @@
    "Tabs" : "Pestañas",
    "Vertical Menu": "Menu vertical",
    "Sidebar Filters" : "Filtros de barra lateral",
-   "Header Filters" : "Filtros de encabezado", 
+   "Header Filters" : "Filtros de encabezado",
    "Languages": "Idiomas",
    "Popular Instructors": "Instructores populares",
    "What you'll learn" : "Que aprenderas",
@@ -127,7 +128,7 @@
    "FILE MANAGER" : "Administrador de archivos",
    "DASHBOARD": "Tablero",
    "SAAS": "saas",
-   "WEB ANALYTICS": "analista de la red",   
+   "WEB ANALYTICS": "analista de la red",
    "INBOX": "Bandeja de entrada",
    "CHAT": "Charla",
    "CALENDAR": "Calendario",
