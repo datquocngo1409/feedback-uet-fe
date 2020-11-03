@@ -1,14 +1,17 @@
 <h3 class="header">Subject List</h3>
 <div class="left-content">
-    <mat-card *ngFor="let subject of subjects">
+    <mat-card *ngFor="let subject of subjects" (click)="viewDetail(subject.id)">
         <mat-card-header>
             <mat-card-title>
                 <b>[{{subject.code}}] {{subject.name}}</b>
             </mat-card-title>
+            <div class="rating">
+                <ms-rating [rating]='4' [itemId]='subject.id' [isReadonly]="true"></ms-rating>
+            </div>
         </mat-card-header>
         <mat-card-content>
-            <span class="teacher-in-subject">Teacher: Nguyễn Văn A</span>
-            <span>Week: 7</span>
+            <span class="teacher-in-subject">Teacher: {{subject.teacherName}}</span>
+            <span>Week: {{calculateWeek(subject.startDate)}}</span>
         </mat-card-content>
     </mat-card>
 </div>

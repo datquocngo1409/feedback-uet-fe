@@ -15,4 +15,8 @@ export class SubjectService {
     getList() {
       return this.api.getSubjectList();
     }
+
+    getById(id) {
+        return this.api.getSubjectById(id);
+    }
 }

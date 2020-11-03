@@ -1,1 +1,62 @@
-hello
+<div class="main">
+    <div [ngClass]="isShowDetail()">
+        <h3 class="header">
+            <b>[{{subject.code}}] {{subject.name}}</b>
+            <div [ngClass]="isShowDetailButton()">
+                <span *ngIf="showDetail" (click)="showDetail = !showDetail" class="material-icons">
+                    open_in_new
+                </span>
+                <span *ngIf="!showDetail" (click)="showDetail = !showDetail" class="material-icons">
+                    close_fullscreen
+                </span>
+            </div>
+        </h3>
+        <div class="week-list" *ngFor="let wNum of weekNumber">
+            <div class="week">
+                <span class="week-text">Week {{wNum}}</span>
+            </div>
+            <div class="week-content">
+                <ul>
+                    <li class="week-content-text">
+                        Content 1
+                        <input type="checkbox" class="week-content-checkbox">
+                    </li>
+                    <li class="week-content-text">
+                        Content 2
+                        <input type="checkbox" class="week-content-checkbox">
+                    </li>
+                    <li class="week-content-text">
+                        Content 3
+                        <input type="checkbox" class="week-content-checkbox">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="showDetail" class="right-content">
+        <h4 class="header">
+            <b>Subject Infomation: </b>
+        </h4>
+        <h5 class="field">
+            <b>Code: </b> {{subject.code}}
+        </h5>
+        <h5 class="field">
+            <b>Name: </b> {{subject.name}}
+        </h5>
+        <h5 class="field">
+            <b>Teacher: </b> {{subject.teacherName}}
+        </h5>
+        <h5 class="field">
+            <b>Start Date: </b> {{subject.startDate}}
+        </h5>
+        <h5 class="field">
+            <b>End Date: </b> {{getEndDate(subject.startDate)}}
+        </h5>
+        <h5 class="field">
+            <div style="float: left">
+                <ms-rating [rating]='subject.rating' [itemId]='subject.id' [isReadonly]="true"></ms-rating>
+            </div>
+        </h5>
+    </div>
+
+</div>

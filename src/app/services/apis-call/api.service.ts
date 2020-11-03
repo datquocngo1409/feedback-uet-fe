@@ -34,4 +34,8 @@ export class API {
     getSubjectList() {
         return this.http.get(environment.apiUrl + `subject`, {});
     }
+
+    getSubjectById(id) {
+        return this.http.get(environment.apiUrl + `subject/` + id, {});
+    }
 }

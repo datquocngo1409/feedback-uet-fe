@@ -63,7 +63,6 @@ import {MatSortModule} from '@angular/material/sort';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import { TestComponent } from './@pages/pages/test/test/test.component';
 import { GridModule } from '@progress/kendo-angular-grid';
-import { ListSubjectComponent } from './@pages/pages/subject/list-subject/list-subject.component';
 
 export const firebaseConfig = {
     apiKey: 'AIzaSyCE0po6Q8jGuBEds-A903KEU4U6Cerojzo',
@@ -171,6 +170,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
             multi: true
         }
     ],
+    exports: [],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class GeneAppModule {
