@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 export interface ChildrenItems {
     state: string;
@@ -16,44 +17,47 @@ export interface Menu {
 
 @Injectable()
 export class HorizontalMenuItems {
-    MENUITEMS = [
+    public MENUITEMS = [
         {
             name: 'UET Rating',
             type: 'sub',
             class: 'group-title',
             icon: '',
             children: [
-                {state: 'account', name: 'Account', type: 'link'},
-                {state: 'setting', name: 'Setting', type: 'link'}
+                {state: 'account', name: 'NAVBAR.Account', type: 'link'},
+                {state: 'setting', name: 'NAVBAR.Setting', type: 'link'}
             ]
         },
         {
-            name: 'Subject',
+            name: 'NAVBAR.Subject',
             type: 'sub',
             class: 'group-title',
             icon: '',
             children: [
-                {state: 'subject/list', name: 'Subject', type: 'link'},
-                {state: 'subject/your', name: 'Your Subject', type: 'link'},
-                {state: 'subject/other', name: 'Other Subject', type: 'link'},
-                {state: 'subject/rated', name: 'Rated Subject', type: 'link'},
-                {state: 'subject/not-rated', name: 'Not Rated Subject', type: 'link'},
+                {state: 'subject/list', name: 'NAVBAR.Subject', type: 'link'},
+                {state: 'subject/your', name: 'NAVBAR.YourSubject', type: 'link'},
+                {state: 'subject/other', name: 'NAVBAR.OtherSubject', type: 'link'},
+                {state: 'subject/rated', name: 'NAVBAR.RatedSubject', type: 'link'},
+                {state: 'subject/not-rated', name: 'NAVBAR.NotRatedSubject', type: 'link'},
             ]
         },
         {
-            name: 'Teacher',
+            name: 'NAVBAR.Teacher',
             type: 'sub',
             class: 'group-title',
             icon: '',
             children: [
-                {state: 'teacher/list', name: 'Teacher', type: 'link'},
-                {state: 'teacher/your', name: 'Your Teacher', type: 'link'},
-                {state: 'teacher/other', name: 'Other Teacher', type: 'link'},
-                {state: 'teacher/rated', name: 'Rated Teacher', type: 'link'},
-                {state: 'teacher/not-rated', name: 'Not Rated Teacher', type: 'link'},
+                {state: 'teacher/list', name: 'NAVBAR.Teacher', type: 'link'},
+                {state: 'teacher/your', name: 'NAVBAR.YourTeacher', type: 'link'},
+                {state: 'teacher/other', name: 'NAVBAR.OtherTeacher', type: 'link'},
+                {state: 'teacher/rated', name: 'NAVBAR.RatedTeacher', type: 'link'},
+                {state: 'teacher/not-rated', name: 'NAVBAR.NotRatedTeacher', type: 'link'},
             ]
         }
     ];
+
+    constructor(private translate: TranslateService) {
+    }
 
     getAll() {
         return this.MENUITEMS;

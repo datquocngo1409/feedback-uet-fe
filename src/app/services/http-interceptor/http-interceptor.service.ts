@@ -1,8 +1,9 @@
-import {HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpHeaders} from '@angular/common/http';
+import {HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpHeaders, HttpErrorResponse} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {Router} from '@angular/router';
 import {AuthService} from '../auth-service/auth.service';
+import {tap} from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'
@@ -20,7 +21,19 @@ export class HttpInterceptorService implements HttpInterceptor {
                         'Authorization': `Bearer ${localStorage.getItem('token')}`
                     })
                 });
-                return next.handle(authReq);
+                return next.handle(authReq).pipe( tap(res => {},
+                    (err: any) => {
+                        if (err instanceof HttpErrorResponse) {
+                            if (err.status !== 401) {
+                                return;
+                            }
+                            console.log('session timeout');
+                            localStorage.removeItem('authenticatedUser');
+                            localStorage.removeItem('language');
+                            localStorage.removeItem('token');
+                            this.router.navigate(['/session/login']);
+                        }
+                    }));
             } else {
                 this.router.navigate(['/session/login']);
             }

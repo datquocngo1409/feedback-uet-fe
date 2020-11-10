@@ -1,4 +1,18 @@
 {
+   "NAVBAR" : {
+      "Account": "Compte",
+      "Setting": "Réglage",
+      "Subject": "Matière",
+      "YourSubject": "Votre sujet",
+      "OtherSubject": "Autre sujet",
+      "RatedSubject": "Sujet évalué",
+      "NotRatedSubject": "Sujet non évalué",
+      "Teacher": "Prof",
+      "YourTeacher": "Votre professeur",
+      "OtherTeacher": "Autre enseignant",
+      "RatedTeacher": "Enseignant classé",
+      "NotRatedTeacher": "Enseignant non classé"
+   },
    "SUBJECT": {
       "Subject": "Matière",
       "SubjectList": "Liste Des Sujets",

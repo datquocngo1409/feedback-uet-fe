@@ -1,4 +1,18 @@
 {
+   "NAVBAR" : {
+      "Account": "アカウント",
+      "Setting": "設定",
+      "Subject": "件名",
+      "YourSubject": "あなたの主題",
+      "OtherSubject": "その他の主題",
+      "RatedSubject": "評価対象",
+      "NotRatedSubject": "未評価の件名",
+      "Teacher": "先生",
+      "YourTeacher": "あなたの先生",
+      "OtherTeacher": "他の先生",
+      "RatedTeacher": "定格教師",
+      "NotRatedTeacher": "評価されていない教師"
+   },
    "SUBJECT": {
       "Subject": "件名",
       "SubjectList": "件名リスト",

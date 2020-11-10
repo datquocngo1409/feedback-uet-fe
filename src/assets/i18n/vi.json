@@ -1,4 +1,18 @@
 {
+   "NAVBAR" : {
+      "Account": "Tài Khoản",
+      "Setting": "Cài Đặt",
+      "Subject": "Môn học",
+      "YourSubject": "Môn học của bạn",
+      "OtherSubject": "Môn học khác",
+      "RatedSubject": "Môn học đã đánh giá",
+      "NotRatedSubject": "Môn học chưa đánh giá",
+      "Teacher": "Giảng viên",
+      "YourTeacher": "Giảng viên đang dạy",
+      "OtherTeacher": "Giảng viên khác",
+      "RatedTeacher": "Giảng viên đã đánh giá",
+      "NotRatedTeacher": "Giảng viên chưa đánh giá"
+   },
    "SUBJECT": {
       "Subject": "Môn học",
       "SubjectList": "Danh sách môn học",

@@ -1,4 +1,18 @@
 {
+  "NAVBAR" : {
+    "Account": "Account",
+    "Setting": "Setting",
+    "Subject": "Subject",
+    "YourSubject": "Your Subject",
+    "OtherSubject": "Other Subject",
+    "RatedSubject": "Rated Subject",
+    "NotRatedSubject": "Not Rated Subject",
+    "Teacher": "Teacher",
+    "YourTeacher": "Your Teacher",
+    "OtherTeacher": "Other Teacher",
+    "RatedTeacher": "Rated Teacher",
+    "NotRatedTeacher": "Not Rated Teacher"
+  },
   "BUTTON": {
     "Rate": "Rate",
     "Cancel": "Cancel",
