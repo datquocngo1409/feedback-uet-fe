@@ -31,6 +31,9 @@ import {MatButtonModule} from '@angular/material/button';
         TranslateModule,
         MatButtonModule
     ],
+    exports: [
+        RatingComponent
+    ]
 })
 export class SubjectModule {
 }

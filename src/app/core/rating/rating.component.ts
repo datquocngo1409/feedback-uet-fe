@@ -22,6 +22,7 @@ export class RatingComponent implements OnInit {
             this.fontSize = 14;
         }
         this.inputName = this.itemId + '_rating';
+        this.rating = parseInt(String(this.rating), 10)
     }
 
     onClick(rating: number): void {

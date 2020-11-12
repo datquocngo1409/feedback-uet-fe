@@ -115,6 +115,9 @@ export class AuthService {
         localStorage.removeItem('userProfile');
         localStorage.removeItem('token');
         localStorage.removeItem('username');
+        localStorage.removeItem('userId');
+        localStorage.removeItem('student');
+        localStorage.removeItem('role');
         this.isLoggedIn = false;
         this.toastr.success('Successfully logged out!');
         this.router.navigate(['/session/login']);
@@ -127,7 +130,15 @@ export class AuthService {
     private setUser(username) {
         this.apiService.synccurrentUser(username).subscribe(user => {
             localStorage.setItem('userProfile', JSON.stringify(user));
-        })
+            const user1 = JSON.parse(localStorage.getItem('userProfile'));
+            localStorage.setItem('userId', user1.id);
+            localStorage.setItem('role', user1.role);
+            if (user1.role === 'STUDENT') {
+                this.apiService.getcurrentStudent(user1.id).subscribe(student => {
+                    localStorage.setItem('student', JSON.stringify(student));
+                });
+            }
+        });
     }
 
     private setUsername(account: any) {

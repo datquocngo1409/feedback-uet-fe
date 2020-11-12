@@ -11,7 +11,8 @@
       "YourTeacher": "Giảng viên đang dạy",
       "OtherTeacher": "Giảng viên khác",
       "RatedTeacher": "Giảng viên đã đánh giá",
-      "NotRatedTeacher": "Giảng viên chưa đánh giá"
+      "NotRatedTeacher": "Giảng viên chưa đánh giá",
+      "Statistical": "Thống kê"
    },
    "SUBJECT": {
       "Subject": "Môn học",
@@ -27,6 +28,10 @@
       "Comments": "Bình luận",
       "Replies": "Phản hồi",
       "Reply": "Phản hồi"
+   },
+   "STATISTICAL": {
+      "StatisticalSubject": "Thống kê môn học",
+      "StatisticalTeacher": "Thống kê giảng viên"
    },
     "OPTION": {
        "Yes": "Có",

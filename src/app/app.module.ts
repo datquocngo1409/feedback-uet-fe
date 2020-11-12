@@ -63,6 +63,10 @@ import {MatSortModule} from '@angular/material/sort';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import { TestComponent } from './@pages/pages/test/test/test.component';
 import { GridModule } from '@progress/kendo-angular-grid';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import {ChartsModule} from 'ng2-charts';
+import { NgxDonutChartModule } from 'ngx-doughnut-chart';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 export const firebaseConfig = {
     apiKey: 'AIzaSyCE0po6Q8jGuBEds-A903KEU4U6Cerojzo',
@@ -88,6 +92,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         BrowserModule,
         BrowserAnimationsModule,
         FormsModule,
+        ChartsModule,
         ReactiveFormsModule,
         RoutingModule,
         FlexLayoutModule,
@@ -104,6 +109,15 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
                 deps: [HttpClient]
             }
         }),
+        NgCircleProgressModule.forRoot({
+            radius: 100,
+            outerStrokeWidth: 16,
+            innerStrokeWidth: 8,
+            outerStrokeColor: '#78C000',
+            innerStrokeColor: '#C7E596',
+            animationDuration: 300
+        }),
+        NgxDonutChartModule,
         AngularFireModule.initializeApp(firebaseConfig),
         AngularFireAuthModule,
         MatButtonModule,
@@ -139,6 +153,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         MatSortModule,
         NgxDatatableModule,
         GridModule,
+        NgxChartsModule
     ],
     declarations: [
         GeneAppComponent,
@@ -170,7 +185,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
             multi: true
         }
     ],
-    exports: [],
+    exports: [
+    ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class GeneAppModule {

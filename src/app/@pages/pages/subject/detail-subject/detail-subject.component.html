@@ -55,7 +55,7 @@
         <h5 class="field">
             <ms-rating (click)="openDialog()" [rating]='subject.rating' [itemId]='subject.id' [isReadonly]="true"></ms-rating>
         </h5>
-        <h5 class="field" class="button-show-comment">
+        <h5 class="button-show-comment field">
             <span *ngIf="showComment" (click)="showComment = !showComment"
                   class="material-icons">keyboard_arrow_up</span>
             <span *ngIf="!showComment" (click)="showComment = !showComment"

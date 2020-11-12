@@ -11,7 +11,8 @@
       "YourTeacher": "あなたの先生",
       "OtherTeacher": "他の先生",
       "RatedTeacher": "定格教師",
-      "NotRatedTeacher": "評価されていない教師"
+      "NotRatedTeacher": "評価されていない教師",
+      "Statistical": "統計"
    },
    "SUBJECT": {
       "Subject": "件名",
@@ -27,6 +28,10 @@
       "Comments": "コメント",
       "Replies": "返信",
       "Reply": "応答"
+   },
+   "STATISTICAL": {
+      "StatisticalSubject": "統計的主題",
+      "StatisticalTeacher": "統計教師"
    },
    "Top Products" : "トップ商品",
    "Menus (dropdowns)" : "メニュー（ドロップダウン）)",

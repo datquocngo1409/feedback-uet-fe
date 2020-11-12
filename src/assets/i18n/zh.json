@@ -11,7 +11,8 @@
       "YourTeacher": "你的老师",
       "OtherTeacher": "其他老师",
       "RatedTeacher": "额定老师",
-      "NotRatedTeacher": "未评为老师"
+      "NotRatedTeacher": "未评为老师",
+      "Statistical": "统计"
    },
    "SUBJECT": {
       "Subject": "学科",
@@ -27,6 +28,10 @@
       "Comments": "评论",
       "Replies": "回覆",
       "Reply": "回覆"
+   },
+   "STATISTICAL": {
+      "StatisticalSubject": "统计科目",
+      "StatisticalTeacher": "统计老师"
    },
    "Top Products" : "热门产品",
    "Menus (dropdowns)" : "菜单（下拉菜单）",

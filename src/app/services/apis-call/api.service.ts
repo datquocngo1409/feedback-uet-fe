@@ -38,4 +38,16 @@ export class API {
     getSubjectById(id) {
         return this.http.get(environment.apiUrl + `subject/` + id, {});
     }
+
+    rateSubject(studentId, subjectId, point) {
+        return this.http.post(environment.apiUrl + `rating-subject/rate`, {
+            'studentId': studentId,
+            'subjectId': subjectId,
+            'point': point
+        });
+    }
+
+    getRatingSubjectBySubjectId(subjectId) {
+        return this.http.get(environment.apiUrl + `rating-subject/by-subject/` + subjectId, {});
+    }
 }

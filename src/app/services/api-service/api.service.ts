@@ -48,4 +48,8 @@ export class ApiService {
     synccurrentUser(username) {
         return this.http.get(environment.apiUrl + `user/getByUsername/` + username, {});
     }
+
+    getcurrentStudent(userId) {
+        return this.http.get(environment.apiUrl + `student/by-user/` + userId, {})
+    }
 }

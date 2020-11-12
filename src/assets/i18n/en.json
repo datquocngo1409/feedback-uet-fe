@@ -1,5 +1,5 @@
 {
-  "NAVBAR" : {
+  "NAVBAR": {
     "Account": "Account",
     "Setting": "Setting",
     "Subject": "Subject",
@@ -11,7 +11,8 @@
     "YourTeacher": "Your Teacher",
     "OtherTeacher": "Other Teacher",
     "RatedTeacher": "Rated Teacher",
-    "NotRatedTeacher": "Not Rated Teacher"
+    "NotRatedTeacher": "Not Rated Teacher",
+    "Statistical": "Statistical"
   },
   "BUTTON": {
     "Rate": "Rate",
@@ -33,6 +34,10 @@
     "Comments": "Comments",
     "Replies": "Replies",
     "Reply": "Reply"
+  },
+  "STATISTICAL": {
+    "StatisticalSubject": "Statistical Subject",
+    "StatisticalTeacher": "Statistical Teacher"
   },
   "Top Products": "Top Products",
   "Menus (dropdowns)": "Menus (dropdowns)",

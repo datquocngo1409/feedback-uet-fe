@@ -11,7 +11,8 @@
       "YourTeacher": "Votre professeur",
       "OtherTeacher": "Autre enseignant",
       "RatedTeacher": "Enseignant classé",
-      "NotRatedTeacher": "Enseignant non classé"
+      "NotRatedTeacher": "Enseignant non classé",
+      "Statistical": "Statistique"
    },
    "SUBJECT": {
       "Subject": "Matière",
@@ -27,6 +28,10 @@
       "Comments": "Commentaires",
       "Replies": "Répondres",
       "Reply": "Répondre"
+   },
+   "STATISTICAL": {
+      "StatisticalSubject": "Sujet statistique",
+      "StatisticalTeacher": "Professeur de statistique"
    },
    "Top Products": "Top Products",
    "Menus (dropdowns)": "Menus (dropdowns)",
