@@ -28,7 +28,11 @@ const appRoutes: Routes = [
                 path: 'subject', loadChildren: () => import('./@pages/pages/subject/subject.module').then(m => m.SubjectModule)
             },
             {
-                path: 'statistical', loadChildren: () => import('./@pages/pages/statistical/statistical.module').then(m => m.StatisticalModule)
+                path: 'statistical', loadChildren: () =>
+                    import('./@pages/pages/statistical/statistical.module').then(m => m.StatisticalModule)
+            },
+            {
+                path: 'admin', loadChildren: () => import('./@pages/pages/admin/admin.module').then(m => m.AdminModule)
             },
             {
                 path: 'test',
@@ -52,7 +56,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(appRoutes,  { useHash: true })],
+    imports: [RouterModule.forRoot(appRoutes, {useHash: true})],
     exports: [RouterModule],
     providers: []
 })

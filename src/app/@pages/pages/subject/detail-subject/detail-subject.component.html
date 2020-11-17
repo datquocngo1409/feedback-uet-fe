@@ -53,23 +53,24 @@
             <b>{{"SUBJECT.EndDate" | translate}}: </b> {{getEndDate(subject.startDate)}}
         </h5>
         <h5 class="field">
-            <ms-rating (click)="openDialog()" [rating]='subject.rating' [itemId]='subject.id' [isReadonly]="true"></ms-rating>
+            <ms-rating (click)="openDialog()" [rating]='subject.rating' [itemId]='subject.id'
+                       [isReadonly]="true"></ms-rating>
         </h5>
         <h5 class="button-show-comment field">
             <span *ngIf="showComment" (click)="showComment = !showComment"
                   class="material-icons">keyboard_arrow_up</span>
             <span *ngIf="!showComment" (click)="showComment = !showComment"
                   class="material-icons">keyboard_arrow_down</span>
-            2 {{"SUBJECT.Comments" | translate}}
+            {{commentNotRepply.length}} {{"SUBJECT.Comments" | translate}}
         </h5>
         <div *ngIf="showComment" class="comment-content">
-            <mat-card *ngFor="let comment of comments">
+            <mat-card *ngFor="let comment of commentNotRepply">
                 <mat-card-header>
-                    <mat-card-title>Ngô Quốc Đạt</mat-card-title>
-                    <mat-card-subtitle>08:22 01/11/2020</mat-card-subtitle>
+                    <mat-card-title>{{comment.studentName}}</mat-card-title>
+                    <mat-card-subtitle>{{comment.creationTime}}</mat-card-subtitle>
                 </mat-card-header>
                 <mat-card-content>
-                    <span>Verry Good</span>
+                    <span>{{comment.content}}</span>
                     <div class="like-button">
                         <span class="like-text">Like</span>
                         <span class="rep-text" (click)="comment.rep = !comment.rep">Rep</span>
@@ -79,44 +80,49 @@
                               class="material-icons cursor-poiner">keyboard_arrow_up</span>
                         <span *ngIf="!comment.showRep" (click)="comment.showRep = !comment.showRep"
                               class="material-icons cursor-poiner">keyboard_arrow_down</span>
-                        2 {{"SUBJECT.Replies" | translate}}
+                        {{getNumCommentRepById(comment.id)}} {{"SUBJECT.Replies" | translate}}
                     </div>
                     <div *ngIf="comment.showRep">
-                        <mat-card>
-                            <mat-card-header>
-                                <mat-card-title>Ngô Quốc Đạt</mat-card-title>
-                                <mat-card-subtitle>12:40 01/11/2020</mat-card-subtitle>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <span>Verry Good</span>
-                                <div class="like-button">
-                                    <span class="like-text">Like</span>
-                                </div>
-                            </mat-card-content>
-                        </mat-card>
-                        <mat-card>
-                            <mat-card-header>
-                                <mat-card-title>Ngô Quốc Đạt</mat-card-title>
-                                <mat-card-subtitle>15:30 01/11/2020</mat-card-subtitle>
-                            </mat-card-header>
-                            <mat-card-content>
-                                <span>Verry Good</span>
-                                <div class="like-button">
-                                    <span class="like-text">Like</span>
-                                </div>
-                            </mat-card-content>
-                        </mat-card>
+                        <div *ngFor="let commentRep of commentRepply">
+                            <mat-card *ngIf="commentRep.parentId === comment.id">
+                                <mat-card-header>
+                                    <mat-card-title>{{commentRep.studentName}}</mat-card-title>
+                                    <mat-card-subtitle>{{commentRep.creationTime}}</mat-card-subtitle>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <span>{{commentRep.content}}</span>
+                                    <div class="like-button">
+                                        <span class="like-text">Like</span>
+                                    </div>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
                     </div>
                     <div *ngIf="comment.rep">
                         <mat-card>
-                            <textarea mat-autosize rows='2' class="input-comment"></textarea>
+                            <textarea id="commentRepTextArea-{{comment.id}}" mat-autosize rows='2' class="input-comment"></textarea>
                             <div class="like-button comment-button">
-                                <div class="btn btn-primary">{{"SUBJECT.Comment" | translate}}</div>
+                                <div class="btn btn-primary"
+                                     (click)="repComment(comment.id)">{{"SUBJECT.Comment" | translate}}</div>
                             </div>
                         </mat-card>
                     </div>
                 </mat-card-content>
             </mat-card>
+        </div>
+        <div>
+            <div>
+                <mat-card>
+                    <textarea
+                        #commentTextArea
+                        mat-autosize rows='2'
+                        class="input-comment"
+                        placeholder="Your Comment"></textarea>
+                    <div class="like-button comment-button">
+                        <div class="btn btn-primary" (click)="comment(commentTextArea.value)">{{"SUBJECT.Comment" | translate}}</div>
+                    </div>
+                </mat-card>
+            </div>
         </div>
     </div>
 </div>

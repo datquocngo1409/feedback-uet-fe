@@ -4,6 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {MatDialog, MatDialogConfig} from '@angular/material/dialog';
 import {DialogRateComponent} from '../dialog/dialog-rate/dialog-rate.component';
 import {TranslateService} from '@ngx-translate/core';
+import {API} from '../../../../services/apis-call/api.service';
 
 @Component({
     selector: 'ms-detail-subject',
@@ -16,24 +17,110 @@ export class DetailSubjectComponent implements OnInit {
     showDetail;
     weekNumber;
     showComment;
-    comments;
+    commentAll;
+    commentNotRepply = [];
+    commentRepply = [];
     dialogRef;
+    user;
+    subjectId;
 
     constructor(
         private subjectService: SubjectService,
         private route: ActivatedRoute,
         private dialog: MatDialog,
-        private translate: TranslateService) {
+        private translate: TranslateService,
+        private api: API) {
     }
 
     ngOnInit(): void {
         this.showDetail = true;
         this.showComment = false;
         this.weekNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-        this.comments = [{id: 1, showRep: false, rep: false}, {id: 2, showRep: false, rep: false}];
+        this.getData();
+    }
+
+    getData() {
         const id = +this.route.snapshot.paramMap.get('id');
         this.subjectService.getById(id).subscribe(subject => {
             this.subject = subject;
+            this.commentAll = [];
+            this.commentRepply = [];
+            this.commentNotRepply = [];
+            this.api.getCommentBySubjectId(id).subscribe(comments => {
+                this.commentAll = comments;
+                for (const comment of this.commentAll) {
+                    comment.showRep = false;
+                    comment.rep = false;
+                    if (!comment.reply) {
+                        this.commentNotRepply.push(comment);
+                    } else {
+                        this.commentRepply.push(comment);
+                    }
+                }
+                this.user = JSON.parse(localStorage.getItem('student'));
+                this.sortCommentByDate();
+            })
+        });
+    }
+
+    sortCommentByDate() {
+        this.commentNotRepply.sort((a, b) => {
+            const aHour = a.creationTime.substring(0, 2);
+            const aMinutes = a.creationTime.substring(3, 5);
+            const aSecond = a.creationTime.substring(6, 8);
+            const aDay = a.creationTime.substring(9, 11);
+            const aMonth = a.creationTime.substring(12, 14);
+            const aYear = a.creationTime.substring(15, 19);
+            const bHour = b.creationTime.substring(0, 2);
+            const bMinutes = b.creationTime.substring(3, 5);
+            const bSecond = b.creationTime.substring(6, 8);
+            const bDay = b.creationTime.substring(9, 11);
+            const bMonth = b.creationTime.substring(12, 14);
+            const bYear = b.creationTime.substring(15, 19);
+            const aDate = new Date();
+            aDate.setFullYear(aYear);
+            aDate.setMonth(aMonth - 1);
+            aDate.setDate(aDay);
+            aDate.setHours(aHour);
+            aDate.setMinutes(aMinutes);
+            aDate.setSeconds(aSecond);
+            const bDate = new Date();
+            bDate.setFullYear(bYear);
+            bDate.setMonth(bMonth - 1);
+            bDate.setDate(bDay);
+            bDate.setHours(bHour);
+            bDate.setMinutes(bMinutes);
+            bDate.setSeconds(bSecond);
+            return <any>aDate - <any>bDate;
+        });
+        this.commentRepply.sort((a, b) => {
+            const aHour = a.creationTime.substring(0, 2);
+            const aMinutes = a.creationTime.substring(3, 5);
+            const aSecond = a.creationTime.substring(6, 8);
+            const aDay = a.creationTime.substring(9, 11);
+            const aMonth = a.creationTime.substring(12, 14);
+            const aYear = a.creationTime.substring(15, 19);
+            const bHour = b.creationTime.substring(0, 2);
+            const bMinutes = b.creationTime.substring(3, 5);
+            const bSecond = b.creationTime.substring(6, 8);
+            const bDay = b.creationTime.substring(9, 11);
+            const bMonth = b.creationTime.substring(12, 14);
+            const bYear = b.creationTime.substring(15, 19);
+            const aDate = new Date();
+            aDate.setFullYear(aYear);
+            aDate.setMonth(aMonth - 1);
+            aDate.setDate(aDay);
+            aDate.setHours(aHour);
+            aDate.setMinutes(aMinutes);
+            aDate.setSeconds(aSecond);
+            const bDate = new Date();
+            bDate.setFullYear(bYear);
+            bDate.setMonth(bMonth - 1);
+            bDate.setDate(bDay);
+            bDate.setHours(bHour);
+            bDate.setMinutes(bMinutes);
+            bDate.setSeconds(bSecond);
+            return <any>aDate - <any>bDate;
         });
     }
 
@@ -79,6 +166,49 @@ export class DetailSubjectComponent implements OnInit {
             data: {
                 subject: this.subject
             }
+        });
+    }
+
+    getNumCommentRepById(id: any) {
+        let count = 0;
+        for (const rep of this.commentRepply) {
+            if (rep.parentId === id) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    repComment(id: any) {
+        // @ts-ignore
+        const value = document.getElementById('commentRepTextArea-' + id).value;
+        if (this.user === undefined) {
+            this.user = JSON.parse(localStorage.getItem('student'));
+        }
+        const data = {
+            studentId: this.user.id,
+            subjectId: this.subject.id,
+            content: value,
+            reply: true,
+            parentId: id
+        }
+        this.api.repComment(data, id).subscribe(next => {
+            this.getData();
+        });
+    }
+
+    comment(value) {
+        if (this.user === undefined) {
+            this.user = JSON.parse(localStorage.getItem('student'));
+        }
+        const data = {
+            studentId: this.user.id,
+            subjectId: this.subject.id,
+            content: value,
+            reply: false
+        }
+        this.api.comment(data).subscribe(next => {
+            this.getData();
         });
     }
 }

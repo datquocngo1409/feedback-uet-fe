@@ -31,12 +31,28 @@ export class API {
         });
     }
 
+    signup(data) {
+        return this.http.post(environment.apiUrl + `signup`, data);
+    }
+
+    signupTeacher(data) {
+        return this.http.post(environment.apiUrl + `teacher-signup`, data);
+    }
+
     getSubjectList() {
         return this.http.get(environment.apiUrl + `subject`, {});
     }
 
     getSubjectById(id) {
         return this.http.get(environment.apiUrl + `subject/` + id, {});
+    }
+
+    createSubject(data) {
+        return this.http.post(environment.apiUrl + `subject`, data);
+    }
+
+    deleteSubject(id) {
+        return this.http.delete(environment.apiUrl + `subject/` + id, {});
     }
 
     rateSubject(studentId, subjectId, point) {
@@ -49,5 +65,45 @@ export class API {
 
     getRatingSubjectBySubjectId(subjectId) {
         return this.http.get(environment.apiUrl + `rating-subject/by-subject/` + subjectId, {});
+    }
+
+    getStudentFull() {
+        return this.http.get(environment.apiUrl + `student/full`, {});
+    }
+
+    getStudentByIdFull(id) {
+        return this.http.get(environment.apiUrl + `student/full/` + id, {});
+    }
+
+    deleteStudent(id) {
+        return this.http.delete(environment.apiUrl + `student/` + id, {});
+    }
+
+    getTeachertFull() {
+        return this.http.get(environment.apiUrl + `teacher/full`, {});
+    }
+
+    getTeacherByIdFull(id) {
+        return this.http.get(environment.apiUrl + `teacher/full/` + id, {});
+    }
+
+    deleteTeacher(id) {
+        return this.http.delete(environment.apiUrl + `teacher/` + id, {});
+    }
+
+    getCommentById(id) {
+        return this.http.get(environment.apiUrl + `comment/` + id, {});
+    }
+
+    getCommentBySubjectId(id) {
+        return this.http.get(environment.apiUrl + `comment/bySubjectId/` + id, {});
+    }
+
+    comment(data) {
+        return this.http.post(environment.apiUrl + `comment`, data);
+    }
+
+    repComment(data, parentId) {
+        return this.http.post(environment.apiUrl + `comment/rep/` + parentId, data);
     }
 }

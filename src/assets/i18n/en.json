@@ -12,13 +12,16 @@
     "OtherTeacher": "Other Teacher",
     "RatedTeacher": "Rated Teacher",
     "NotRatedTeacher": "Not Rated Teacher",
-    "Statistical": "Statistical"
+    "Statistical": "Statistical",
+    "Admin": "Admin",
+    "Student": "Student"
   },
   "BUTTON": {
     "Rate": "Rate",
     "Cancel": "Cancel",
     "Submit": "Submit",
-    "Comment": "Comment"
+    "Comment": "Comment",
+    "New": "New"
   },
   "SUBJECT": {
     "Subject": "Subject",
@@ -38,6 +41,30 @@
   "STATISTICAL": {
     "StatisticalSubject": "Statistical Subject",
     "StatisticalTeacher": "Statistical Teacher"
+  },
+  "ADMIN": {
+    "AdminSubject": "Admin Subject",
+    "AdminStudent": "Admin Student",
+    "AdminTeacher": "Admin Teacher",
+    "Name": "Name",
+    "StudentCode": "Student Code",
+    "Code": "Code",
+    "Teacher": "Teacher",
+    "Username": "Username",
+    "Age": "Age",
+    "Address": "Address",
+    "Email": "Email",
+    "Phone": "Phone",
+    "StartDate": "Start Date",
+    "EndDate": "End Date",
+    "RatingValue": "Rating Value",
+    "RatingCount": "Rating Count",
+    "Edit": "Edit",
+    "Delete": "Delete",
+    "New": "New"
+  },
+  "STUDENT": {
+    "Student": "Student"
   },
   "Top Products": "Top Products",
   "Menus (dropdowns)": "Menus (dropdowns)",

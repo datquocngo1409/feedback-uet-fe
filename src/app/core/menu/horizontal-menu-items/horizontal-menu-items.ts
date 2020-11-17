@@ -63,6 +63,17 @@ export class HorizontalMenuItems {
                 {state: 'statistical/subject', name: 'NAVBAR.Subject', type: 'link'},
                 {state: 'statistical/teacher', name: 'NAVBAR.Teacher', type: 'link'},
             ]
+        },
+        {
+            name: 'NAVBAR.Admin',
+            type: 'sub',
+            class: 'group-title',
+            icon: '',
+            children: [
+                {state: 'admin/subject', name: 'NAVBAR.Subject', type: 'link'},
+                {state: 'admin/teacher', name: 'NAVBAR.Teacher', type: 'link'},
+                {state: 'admin/student', name: 'NAVBAR.Student', type: 'link'},
+            ]
         }
     ];
 

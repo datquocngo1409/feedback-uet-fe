@@ -12,7 +12,9 @@
       "OtherTeacher": "Autre enseignant",
       "RatedTeacher": "Enseignant classé",
       "NotRatedTeacher": "Enseignant non classé",
-      "Statistical": "Statistique"
+      "Statistical": "Statistique",
+      "Admin": "Administrateur",
+      "Student": "Étudiant"
    },
    "SUBJECT": {
       "Subject": "Matière",
@@ -32,6 +34,37 @@
    "STATISTICAL": {
       "StatisticalSubject": "Sujet statistique",
       "StatisticalTeacher": "Professeur de statistique"
+   },
+   "ADMIN": {
+      "AdminSubject": "Sujet de l'administrateur",
+      "AdminStudent": "Étudiant en administration",
+      "AdminTeacher": "Enseignant administratif",
+      "Name": "Nom",
+      "StudentCode": "Code étudiant",
+      "Code": "Code",
+      "Teacher": "Prof",
+      "Username": "Nom d'utilisateur",
+      "Age": "Âge",
+      "Address": "Adresse",
+      "Email": "Email",
+      "Phone": "Téléphone",
+      "StartDate": "Date de début",
+      "EndDate": "Date de fin",
+      "RatingValue": "Valeur de notation",
+      "RatingCount": "Nombre de notes",
+      "Edit": "Éditer",
+      "Delete": "Supprimer",
+      "New": "Nouveau"
+   },
+   "STUDENT": {
+      "Student": "Student"
+   },
+   "BUTTON": {
+      "Rate": "Taux",
+      "Cancel": "Annuler",
+      "Submit": "Soumettre",
+      "Comment": "Commentaire",
+      "New": "Nouveau"
    },
    "Top Products": "Top Products",
    "Menus (dropdowns)": "Menus (dropdowns)",

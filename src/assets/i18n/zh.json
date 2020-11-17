@@ -12,7 +12,9 @@
       "OtherTeacher": "其他老师",
       "RatedTeacher": "额定老师",
       "NotRatedTeacher": "未评为老师",
-      "Statistical": "统计"
+      "Statistical": "统计",
+      "Admin": "管理员",
+      "Student": "学生"
    },
    "SUBJECT": {
       "Subject": "学科",
@@ -32,6 +34,37 @@
    "STATISTICAL": {
       "StatisticalSubject": "统计科目",
       "StatisticalTeacher": "统计老师"
+   },
+   "ADMIN": {
+      "AdminSubject": "管理员主题",
+      "AdminStudent": "管理员学生",
+      "AdminTeacher": "管理员老师",
+      "Name": "名稱",
+      "StudentCode": "學生代碼",
+      "Code": "碼",
+      "Teacher": "老師",
+      "Username": "用戶名",
+      "Age": "年齡",
+      "Address": "地址",
+      "Email": "電子郵件",
+      "Phone": "電話",
+      "StartDate": "開始日期",
+      "EndDate": "結束日期",
+      "RatingValue": "額定值",
+      "RatingCount": "評分計數",
+      "Edit": "編輯",
+      "Delete": "刪除",
+      "New": "新"
+   },
+   "STUDENT": {
+      "Student": "Student"
+   },
+   "BUTTON": {
+      "Rate": "率",
+      "Cancel": "取消",
+      "Submit": "提交",
+      "Comment": "评论",
+      "New": "新"
    },
    "Top Products" : "热门产品",
    "Menus (dropdowns)" : "菜单（下拉菜单）",

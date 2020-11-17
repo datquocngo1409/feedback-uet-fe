@@ -12,7 +12,16 @@
       "OtherTeacher": "他の先生",
       "RatedTeacher": "定格教師",
       "NotRatedTeacher": "評価されていない教師",
-      "Statistical": "統計"
+      "Statistical": "統計",
+      "Admin": "管理者",
+      "Student": "学生"
+   },
+   "BUTTON": {
+      "Rate": "割合",
+      "Cancel": "キャンセル",
+      "Submit": "参加する",
+      "Comment": "コメント",
+      "New": "新着"
    },
    "SUBJECT": {
       "Subject": "件名",
@@ -32,6 +41,30 @@
    "STATISTICAL": {
       "StatisticalSubject": "統計的主題",
       "StatisticalTeacher": "統計教師"
+   },
+   "ADMIN": {
+      "AdminSubject": "管理者の件名",
+      "AdminStudent": "管理学生",
+      "AdminTeacher": "管理教師",
+      "Name": "名前",
+      "StudentCode": "学生コード",
+      "Code": "コード",
+      "Teacher": "先生",
+      "Username": "ユーザー名",
+      "Age": "年齢",
+      "Address": "住所",
+      "Email": "Eメール",
+      "Phone": "電話",
+      "StartDate": "開始日",
+      "EndDate": "終了日",
+      "RatingValue": "評価値",
+      "RatingCount": "評価カウント",
+      "Edit": "編集",
+      "Delete": "削除",
+      "New": "新着"
+   },
+   "STUDENT": {
+      "Student": "Student"
    },
    "Top Products" : "トップ商品",
    "Menus (dropdowns)" : "メニュー（ドロップダウン）)",
