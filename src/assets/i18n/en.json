@@ -38,6 +38,15 @@
     "Replies": "Replies",
     "Reply": "Reply"
   },
+  "TEACHER": {
+    "TeacherList": "Teacher List",
+    "TeacherInfomation": "Teacher Infomation",
+    "TEACHER": "TEACHER",
+    "Name": "Name",
+    "PhoneNumber": "Phone Number",
+    "Email" : "Email",
+    "Age": "Age"
+  },
   "STATISTICAL": {
     "StatisticalSubject": "Statistical Subject",
     "StatisticalTeacher": "Statistical Teacher"

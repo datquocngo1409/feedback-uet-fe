@@ -1,0 +1,40 @@
+.main {
+  animation-duration: 1s;
+}
+
+.teacher-content {
+  min-height: 80%;
+  background-color: red;
+}
+
+.header {
+  border-left: 5px solid #448AFF;
+  margin-left: 10px;
+}
+
+.field {
+  margin-left: 30px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.detail-left-content {
+  width: 50%;
+  float: left;
+}
+
+.detail-right-content {
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+
+.teacher-image {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 50px;
+}
+
+.button-container {
+  margin-right: 200px;
+}

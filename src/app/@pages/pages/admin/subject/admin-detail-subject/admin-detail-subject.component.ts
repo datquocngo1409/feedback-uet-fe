@@ -22,7 +22,7 @@ export class AdminDetailSubjectComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    this.api.getTeachertFull().subscribe(teachers => {
+    this.api.getTeacherFull().subscribe(teachers => {
       this.teachers = teachers;
       if (id === 'new') {
         this.ACTION = 'NEW';

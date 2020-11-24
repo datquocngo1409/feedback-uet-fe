@@ -32,7 +32,8 @@ import {MatButtonModule} from '@angular/material/button';
         MatButtonModule
     ],
     exports: [
-        RatingComponent
+        RatingComponent,
+        RatingBigComponent
     ]
 })
 export class SubjectModule {

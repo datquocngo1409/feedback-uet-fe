@@ -15,10 +15,11 @@ import {NgxEasypiechartModule} from 'ngx-easypiechart';
 import {DoughnutComponent} from '../../../core/doughnut/doughnut.component';
 import {NgxDonutChartModule} from 'ngx-doughnut-chart';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
+import { DetailStatisticalTeacherComponent } from './detail/detail-statistical-teacher/detail-statistical-teacher.component';
 
 
 @NgModule({
-  declarations: [StatisticalSubjectComponent, StatisticalTeacherComponent, DetailStatisticalSubjectComponent, DoughnutComponent],
+  declarations: [StatisticalSubjectComponent, StatisticalTeacherComponent, DetailStatisticalSubjectComponent, DoughnutComponent, DetailStatisticalTeacherComponent],
     imports: [
         CommonModule,
         StatisticalRoutingModule,

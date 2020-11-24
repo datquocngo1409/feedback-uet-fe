@@ -63,8 +63,20 @@ export class API {
         });
     }
 
+    rateTeacher(studentId, teacherId, point) {
+        return this.http.post(environment.apiUrl + `rating-teacher/rate`, {
+            'studentId': studentId,
+            'teacherId': teacherId,
+            'point': point
+        });
+    }
+
     getRatingSubjectBySubjectId(subjectId) {
         return this.http.get(environment.apiUrl + `rating-subject/by-subject/` + subjectId, {});
+    }
+
+    getRatingTeacherByTeacherId(teacherId) {
+        return this.http.get(environment.apiUrl + `rating-teacher/by-teacher/` + teacherId, {});
     }
 
     getStudentFull() {
@@ -79,8 +91,12 @@ export class API {
         return this.http.delete(environment.apiUrl + `student/` + id, {});
     }
 
-    getTeachertFull() {
+    getTeacherFull() {
         return this.http.get(environment.apiUrl + `teacher/full`, {});
+    }
+
+    getTeacher() {
+        return this.http.get(environment.apiUrl + `teacher`, {});
     }
 
     getTeacherByIdFull(id) {

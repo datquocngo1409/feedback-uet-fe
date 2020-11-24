@@ -42,7 +42,7 @@ export class AdminTeacherComponent implements OnInit, AfterViewInit {
 
     getData() {
         this.data = [];
-        this.api.getTeachertFull().subscribe(teachers => {
+        this.api.getTeacherFull().subscribe(teachers => {
             this.teachers = teachers;
             for (const teacher of this.teachers) {
                 const d = {

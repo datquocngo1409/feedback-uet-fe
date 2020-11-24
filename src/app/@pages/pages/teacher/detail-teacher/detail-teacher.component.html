@@ -1,0 +1,30 @@
+<div class="main">
+    <div class="teacher-content">
+        <div class="detail-left-content">
+            <h4 class="header">
+                <b>Rate Teacher {{teacher.user.name}}: </b>
+            </h4>
+            <h5 class="field">
+                <b>{{"TEACHER.PhoneNumber" | translate}}: </b> {{teacher.user.phone}}
+            </h5>
+            <h5 class="field">
+                <b>{{"TEACHER.Email" | translate}}: </b> {{teacher.user.email}}
+            </h5>
+            <h5 class="field">
+                <b>{{"TEACHER.Age" | translate}}: </b> {{teacher.user.age}}
+            </h5>
+            <div class="rating-container">
+                <ms-rating-big [rating]='teacher.rating' [itemId]='teacher.id' [isReadonly]="false" (ratingClick)="getRating($event)"></ms-rating-big>
+            </div>
+        </div>
+        <div class="detail-right-content">
+            <img class="teacher-image" src="../../../../../assets/img/user-1.jpg">
+        </div>
+    </div>
+    <div class="pad-wrap justify-content-start button-container">
+        <mat-card-actions>
+            <button mat-raised-button color="warn" type="button" (click)="onCancel()">{{'BUTTON.Cancel'|translate}}</button>
+            <button mat-raised-button color="primary" type="submit" (click)="rate()">{{'BUTTON.Rate'|translate}}</button>
+        </mat-card-actions>
+    </div>
+</div>

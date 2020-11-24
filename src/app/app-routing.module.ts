@@ -28,6 +28,9 @@ const appRoutes: Routes = [
                 path: 'subject', loadChildren: () => import('./@pages/pages/subject/subject.module').then(m => m.SubjectModule)
             },
             {
+                path: 'teacher', loadChildren: () => import('./@pages/pages/teacher/teacher.module').then(m => m.TeacherModule)
+            },
+            {
                 path: 'statistical', loadChildren: () =>
                     import('./@pages/pages/statistical/statistical.module').then(m => m.StatisticalModule)
             },
