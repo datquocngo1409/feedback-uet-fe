@@ -87,6 +87,14 @@ export class API {
         return this.http.get(environment.apiUrl + `student/full/` + id, {});
     }
 
+    getUserById(id) {
+        return this.http.get(environment.apiUrl + `user/` + id, {});
+    }
+
+    updateUser(id, data) {
+        return this.http.patch(environment.apiUrl + `user/` + id, data);
+    }
+
     deleteStudent(id) {
         return this.http.delete(environment.apiUrl + `student/` + id, {});
     }

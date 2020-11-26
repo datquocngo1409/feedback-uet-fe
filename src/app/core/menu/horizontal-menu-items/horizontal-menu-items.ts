@@ -17,6 +17,7 @@ export interface Menu {
 
 @Injectable()
 export class HorizontalMenuItems {
+    pushedAdmin = false;
     public MENUITEMS = [
         {
             name: 'UET Rating',
@@ -64,20 +65,9 @@ export class HorizontalMenuItems {
                 {state: 'statistical/teacher', name: 'NAVBAR.Teacher', type: 'link'},
             ]
         },
-        {
-            name: 'NAVBAR.Admin',
-            type: 'sub',
-            class: 'group-title',
-            icon: '',
-            children: [
-                {state: 'admin/subject', name: 'NAVBAR.Subject', type: 'link'},
-                {state: 'admin/teacher', name: 'NAVBAR.Teacher', type: 'link'},
-                {state: 'admin/student', name: 'NAVBAR.Student', type: 'link'},
-            ]
-        }
     ];
 
-    constructor(private translate: TranslateService) {
+    constructor() {
     }
 
     getAll() {
@@ -86,6 +76,15 @@ export class HorizontalMenuItems {
 
     add(menu: any) {
         this.MENUITEMS.push(menu);
+    }
+
+    contain(menu) {
+        for (const m of this.MENUITEMS) {
+            if (m === menu) {
+                return true;
+            }
+        }
+        return false;
     }
 
     length() {

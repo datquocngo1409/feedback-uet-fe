@@ -18,7 +18,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {AdminSubjectComponent} from './subject/admin-subject/admin-subject.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FlexModule} from '@angular/flex-layout';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
@@ -52,7 +52,8 @@ import {MatSelectModule} from '@angular/material/select';
         FlexModule,
         MatCardModule,
         MatDividerModule,
-        MatSelectModule
+        MatSelectModule,
+        FormsModule
     ]
 })
 export class AdminModule {

@@ -13,6 +13,8 @@ export class AdminDetailSubjectComponent implements OnInit {
   ACTION;
   teachers;
   formGroup: FormGroup;
+  id;
+  subject;
   constructor(
       private route: ActivatedRoute,
       private router: Router,
@@ -22,18 +24,26 @@ export class AdminDetailSubjectComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
+    this.id = id;
     this.api.getTeacherFull().subscribe(teachers => {
       this.teachers = teachers;
       if (id === 'new') {
         this.ACTION = 'NEW';
         this.formGroup = this.formBuilder.group({
-          'code': ['', [Validators.required]],
-          'name': ['', Validators.required],
-          'teacherId': [0, Validators.required],
-          'startDate': ['', Validators.required]
+          code: ['', [Validators.required]],
+          name: ['', Validators.required],
+          teacherId: [0, Validators.required],
+          startDate: ['', Validators.required]
         });
       } else {
         this.ACTION = 'EDIT';
+        this.formGroup = this.formBuilder.group({
+          code: ['', [Validators.required]],
+          name: ['', Validators.required],
+          teacherId: [0, Validators.required],
+          startDate: ['', Validators.required]
+        });
+        this.loadEdit();
       }
     })
   }
@@ -60,5 +70,13 @@ export class AdminDetailSubjectComponent implements OnInit {
     const day = data[2];
     const result = day + '/' + month + '/' + year;
     this.formGroup.patchValue({startDate: result});
+  }
+
+  private loadEdit() {
+    this.api.getSubjectById(this.id).subscribe(subject => {
+      this.subject = subject;
+      this.formGroup.patchValue({teacherId: this.subject.teacherId})
+      this.formGroup.patchValue(this.subject);
+    })
   }
 }

@@ -13,7 +13,7 @@ import {Router} from '@angular/router';
 })
 export class AdminSubjectComponent implements OnInit, AfterViewInit {
 
-    displayedColumns = ['code', 'name', 'teacherName', 'startDate', 'endDate', 'rating', 'ratingCount'];
+    displayedColumns = ['code', 'name', 'teacherName', 'startDate', 'endDate', 'rating', 'ratingCount', 'edit'];
     dataSource;
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort, {}) sort: MatSort;
@@ -59,8 +59,8 @@ export class AdminSubjectComponent implements OnInit, AfterViewInit {
         console.log(`product code ${productCode}`);
     }
 
-    edit(element: any) {
-
+    edit(id: any) {
+        this.router.navigate(['/admin/subject/' + id]);
     }
 
     delete(id: any) {

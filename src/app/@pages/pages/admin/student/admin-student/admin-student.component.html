@@ -55,16 +55,16 @@
                 <mat-header-cell *matHeaderCellDef mat-sort-header>{{'ADMIN.Phone' | translate}}</mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.phone }} </mat-cell>
             </ng-container>
-            <!-- Action Column -->
-<!--            <ng-container matColumnDef="edit">-->
-<!--                <mat-header-cell *matHeaderCellDef mat-sort-header>{{'ADMIN.Edit' | translate}}</mat-header-cell>-->
-<!--                <mat-cell *matCellDef="let element">-->
-<!--                    <button mat-icon-button matTooltip="Click to Edit" class="iconbutton"-->
-<!--                            color="primary" (click)="edit(element)">-->
-<!--                        <mat-icon>edit</mat-icon>-->
-<!--                    </button>-->
-<!--                </mat-cell>-->
-<!--            </ng-container>-->
+             Action Column
+            <ng-container matColumnDef="edit">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>{{'ADMIN.Edit' | translate}}</mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <button mat-icon-button matTooltip="Click to Edit" class="iconbutton"
+                            color="primary" (click)="edit(element.userId)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </mat-cell>
+            </ng-container>
             <ng-container matColumnDef="delete">
                 <mat-header-cell *matHeaderCellDef mat-sort-header>{{'ADMIN.Delete' | translate}}</mat-header-cell>
                 <mat-cell *matCellDef="let element">

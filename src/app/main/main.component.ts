@@ -141,6 +141,8 @@ export class MainComponent implements OnInit {
         })
         this.screenWidth = window.innerWidth;
         this.screenHeight = window.innerHeight;
+        this.menuItems = new HorizontalMenuItems();
+        this.menuItems = this.authService.getPermissionSubMenu();
         // this.authService.syncCurrentUserData().add(() => {
         //     this.menuItems = new HorizontalMenuItems();
         //     this.menuItems = this.authService.getPermissionSubMenu();

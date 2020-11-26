@@ -13,7 +13,7 @@ import {Router} from '@angular/router';
 })
 export class AdminTeacherComponent implements OnInit, AfterViewInit {
 
-    displayedColumns = ['name', 'username', 'age', 'address', 'email', 'phone', 'delete'];
+    displayedColumns = ['name', 'username', 'age', 'address', 'email', 'phone', 'edit', 'delete'];
     dataSource;
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort, {}) sort: MatSort;
@@ -36,8 +36,8 @@ export class AdminTeacherComponent implements OnInit, AfterViewInit {
         console.log(`product code ${productCode}`);
     }
 
-    edit(element: any) {
-
+    edit(id: any) {
+        this.router.navigate(['/admin/teacher/' + id]);
     }
 
     getData() {
@@ -53,6 +53,7 @@ export class AdminTeacherComponent implements OnInit, AfterViewInit {
                     address: teacher.user.address,
                     email: teacher.user.email,
                     phone: teacher.user.phone,
+                    userId: teacher.user.id
                 };
                 this.data.push(d);
             }

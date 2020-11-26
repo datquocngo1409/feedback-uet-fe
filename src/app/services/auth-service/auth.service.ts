@@ -144,4 +144,25 @@ export class AuthService {
     private setUsername(account: any) {
         localStorage.setItem('username', account);
     }
+
+    getPermissionSubMenu() {
+        const menuItems = new HorizontalMenuItems();
+        const adminItem = {
+            name: 'NAVBAR.Admin',
+            type: 'sub',
+            class: 'group-title',
+            icon: '',
+            children: [
+                {state: 'admin/subject', name: 'NAVBAR.Subject', type: 'link'},
+                {state: 'admin/teacher', name: 'NAVBAR.Teacher', type: 'link'},
+                {state: 'admin/student', name: 'NAVBAR.Student', type: 'link'},
+            ]
+        }
+        if (localStorage.getItem('role') === 'ADMIN') {
+            if (!menuItems.contain(adminItem)) {
+                menuItems.add(adminItem);
+            }
+        }
+        return menuItems;
+    }
 }
