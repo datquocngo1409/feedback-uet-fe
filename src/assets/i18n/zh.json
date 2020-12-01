@@ -1,4 +1,8 @@
 {
+   "ERROR": {
+      "IsRequired": "是必须的",
+      "IsInvalid": "是无效的"
+   },
    "NAVBAR" : {
       "Account": "帐户",
       "Setting": "设置",
@@ -31,6 +35,16 @@
       "Replies": "回覆",
       "Reply": "回覆"
    },
+   "TEACHER": {
+      "TeacherList": "教师名单",
+      "TeacherInformation": "老师信息",
+      "TEACHER": "老师",
+      "Teacher": "老师",
+      "Name": "名称",
+      "PhoneNumber": "电话号码",
+      "Email" : "电子邮件",
+      "Age": "年龄"
+   },
    "STATISTICAL": {
       "StatisticalSubject": "统计科目",
       "StatisticalTeacher": "统计老师"
@@ -54,10 +68,15 @@
       "RatingCount": "評分計數",
       "Edit": "編輯",
       "Delete": "刪除",
-      "New": "新"
+      "New": "新",
+      "Submit": "提交",
+      "Password": "密码",
+      "MSSV": "学生代码",
+      "PhoneNumber": "电话号码",
+      "AvatarUrl": "头像链接"
    },
    "STUDENT": {
-      "Student": "Student"
+      "Student": "学生"
    },
    "BUTTON": {
       "Rate": "率",

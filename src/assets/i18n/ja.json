@@ -1,4 +1,8 @@
 {
+   "ERROR": {
+      "IsRequired": "必要とされている",
+      "IsInvalid": "無効です"
+   },
    "NAVBAR" : {
       "Account": "アカウント",
       "Setting": "設定",
@@ -38,6 +42,16 @@
       "Replies": "返信",
       "Reply": "応答"
    },
+   "TEACHER": {
+      "TeacherList": "教師リスト",
+      "TeacherInformation": "教師情報",
+      "TEACHER": "先生",
+      "Teacher": "先生",
+      "Name": "名前",
+      "PhoneNumber": "電話番号",
+      "Email" : "Eメール",
+      "Age": "年齢"
+   },
    "STATISTICAL": {
       "StatisticalSubject": "統計的主題",
       "StatisticalTeacher": "統計教師"
@@ -61,7 +75,12 @@
       "RatingCount": "評価カウント",
       "Edit": "編集",
       "Delete": "削除",
-      "New": "新着"
+      "New": "新着",
+      "Submit": "参加する",
+      "Password": "パスワード",
+      "MSSV": "学生コード",
+      "PhoneNumber": "電話番号",
+      "AvatarUrl": "アバターリンク"
    },
    "STUDENT": {
       "Student": "Student"

@@ -1,4 +1,8 @@
 {
+   "ERROR": {
+      "IsRequired": "không thể rỗng",
+      "IsInvalid": "sai định dạng"
+   },
    "NAVBAR" : {
       "Account": "Tài Khoản",
       "Setting": "Cài Đặt",
@@ -31,6 +35,16 @@
       "Replies": "Phản hồi",
       "Reply": "Phản hồi"
    },
+   "TEACHER": {
+      "TeacherList": "Danh sách Giảng viên",
+      "TeacherInformation": "Thông tin Giảng viên",
+      "TEACHER": "GIẢNG VIÊN",
+      "Teacher": "Giảng viên",
+      "Name": "Tên",
+      "PhoneNumber": "Số điện thoại",
+      "Email" : "Email",
+      "Age": "Tuổi"
+   },
    "STATISTICAL": {
       "StatisticalSubject": "Thống kê môn học",
       "StatisticalTeacher": "Thống kê giảng viên"
@@ -54,7 +68,12 @@
       "RatingCount": "Lượt đánh giá",
       "Edit": "Sửa",
       "Delete": "Xóa",
-      "New": "Tạo mới"
+      "New": "Tạo mới",
+      "Submit": "Submit",
+      "Password": "Mật khẩu",
+      "MSSV": "MSSV",
+      "PhoneNumber": "Số điện thoại",
+      "AvatarUrl": "Link ảnh đại diện"
    },
    "STUDENT": {
       "Student": "Student"

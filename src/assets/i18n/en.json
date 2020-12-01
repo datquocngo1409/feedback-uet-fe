@@ -1,4 +1,8 @@
 {
+  "ERROR": {
+    "IsRequired": "is required",
+    "IsInvalid": "is invalid"
+  },
   "NAVBAR": {
     "Account": "Account",
     "Setting": "Setting",
@@ -40,8 +44,9 @@
   },
   "TEACHER": {
     "TeacherList": "Teacher List",
-    "TeacherInfomation": "Teacher Infomation",
+    "TeacherInformation": "Teacher Information",
     "TEACHER": "TEACHER",
+    "Teacher": "Teacher",
     "Name": "Name",
     "PhoneNumber": "Phone Number",
     "Email" : "Email",
@@ -70,7 +75,12 @@
     "RatingCount": "Rating Count",
     "Edit": "Edit",
     "Delete": "Delete",
-    "New": "New"
+    "New": "New",
+    "Submit": "Submit",
+    "Password": "Password",
+    "MSSV": "Student Code",
+    "PhoneNumber": "Phone Number",
+    "AvatarUrl": "Avatar Url"
   },
   "STUDENT": {
     "Student": "Student"

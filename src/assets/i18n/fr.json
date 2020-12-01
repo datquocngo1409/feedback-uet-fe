@@ -1,4 +1,8 @@
 {
+   "ERROR": {
+      "IsRequired": "est requis",
+      "IsInvalid": "est invalide"
+   },
    "NAVBAR" : {
       "Account": "Compte",
       "Setting": "Réglage",
@@ -31,6 +35,16 @@
       "Replies": "Répondres",
       "Reply": "Répondre"
    },
+   "TEACHER": {
+      "TeacherList": "Liste des enseignants",
+      "TeacherInformation": "Information de l'enseignant",
+      "TEACHER": "PROF",
+      "Teacher": "Prof",
+      "Name": "Nom",
+      "PhoneNumber": "Numéro de téléphone",
+      "Email" : "Email",
+      "Age": "Âge"
+   },
    "STATISTICAL": {
       "StatisticalSubject": "Sujet statistique",
       "StatisticalTeacher": "Professeur de statistique"
@@ -54,7 +68,12 @@
       "RatingCount": "Nombre de notes",
       "Edit": "Éditer",
       "Delete": "Supprimer",
-      "New": "Nouveau"
+      "New": "Nouveau",
+      "Submit": "Soumettre",
+      "Password": "Mot de passe",
+      "MSSV": "Code étudiant",
+      "PhoneNumber": "Numéro de téléphone",
+      "AvatarUrl": "Lien avatar"
    },
    "STUDENT": {
       "Student": "Student"
