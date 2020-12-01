@@ -89,7 +89,7 @@
                         <mat-select (selectionChange)="select($event.value)" id="select" formControlName="teacherId">
                             <mat-option
                                     *ngFor="let teacher of teachers; index as i"
-                                    value="{{teacher.id}}"
+                                    [value]="teacher.id"
                                     (select)="getSelectedValue(i, teacher.id)">
                                 {{teacher.user.name}}
                             </mat-option>
@@ -118,5 +118,3 @@
         </div>
     </mat-card>
 </div>
-
-{{subject | json}}

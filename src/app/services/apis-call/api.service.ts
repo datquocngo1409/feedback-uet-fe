@@ -51,6 +51,10 @@ export class API {
         return this.http.post(environment.apiUrl + `subject`, data);
     }
 
+    updateSubject(data, id) {
+        return this.http.patch(environment.apiUrl + `subject/` + id, data);
+    }
+
     deleteSubject(id) {
         return this.http.delete(environment.apiUrl + `subject/` + id, {});
     }
