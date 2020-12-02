@@ -4,8 +4,9 @@
     "license": "MIT",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve",
-        "build": "node --max_old_space_size=8048 node_modules/@angular/cli/bin/ng build --prod --aot --build-optimizer",
+        "start": "node server.js",
+        "build": "ng build --aot --prod",
+        "start:prod": "node server.js",
         "test": "ng test",
         "lint": "ng lint",
         "e2e": "ng e2e"
@@ -108,6 +109,7 @@
         "rxjs": "^6.5.4",
         "rxjs-compat": "^6.5.4",
         "screenfull": "^5.0.1",
+        "serve-favicon": "^2.5.0",
         "slick-carousel": "^1.8.1",
         "sortablejs": "^1.10.2",
         "tslib": "^2.0.0",
