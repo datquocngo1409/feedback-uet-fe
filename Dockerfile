@@ -10,7 +10,7 @@ RUN node_modules/.bin/ng build --prod
 
 # Stage 2
 FROM nginx:latest
-COPY --from=build-step /app/dist/gts-fe /usr/share/nginx/html
+COPY --from=build-step /app/dist/assets /usr/share/nginx/html
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
