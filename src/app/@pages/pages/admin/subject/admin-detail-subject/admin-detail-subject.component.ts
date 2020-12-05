@@ -33,10 +33,13 @@ export class AdminDetailSubjectComponent implements OnInit {
             if (id === 'new') {
                 this.ACTION = 'NEW';
                 this.formGroup = this.formBuilder.group({
+                    id: [],
                     code: ['', [Validators.required]],
                     name: ['', Validators.required],
                     teacherId: [0, Validators.required],
-                    startDate: ['', Validators.required]
+                    startDate: ['', Validators.required],
+                    rating: [0],
+                    ratingCount: [0]
                 });
             } else {
                 this.ACTION = 'EDIT';
@@ -55,10 +58,17 @@ export class AdminDetailSubjectComponent implements OnInit {
     }
 
     onSubmit() {
-        this.formatStartDate(this.formGroup.value.startDate);
-        this.api.updateSubject(this.formGroup.value, this.id).subscribe(next => {
-            this.router.navigate(['admin/subject']);
-        });
+        if (this.ACTION === 'NEW') {
+            this.formatStartDate(this.formGroup.value.startDate);
+            this.api.createSubject(this.formGroup.value).subscribe(next => {
+                this.router.navigate(['admin/subject']);
+            });
+        } else {
+            this.formatStartDate(this.formGroup.value.startDate);
+            this.api.updateSubject(this.formGroup.value, this.id).subscribe(next => {
+                this.router.navigate(['admin/subject']);
+            });
+        }
     }
 
     select(value: any) {

@@ -71,9 +71,19 @@ export class AuthService {
         this.apiService.login(value.account, value.password).subscribe((result: any) => {
             this.setUsername(value.account);
             this.setToken(result.token);
-            this.setUser(value.account);
-            this.toastr.success('Successfully Logged In!');
-            this.router.navigate(['/']);
+            this.apiService.synccurrentUser(value.account).subscribe(user => {
+                localStorage.setItem('userProfile', JSON.stringify(user));
+                const user1 = JSON.parse(localStorage.getItem('userProfile'));
+                localStorage.setItem('userId', user1.id);
+                localStorage.setItem('role', user1.role);
+                if (user1.role === 'STUDENT') {
+                    this.apiService.getcurrentStudent(user1.id).subscribe(student => {
+                        localStorage.setItem('student', JSON.stringify(student));
+                    });
+                }
+                this.toastr.success('Successfully Logged In!');
+                this.router.navigate(['/']);
+            });
         }, (err) => {
             this.toastr.error(err.error.localizedMessage);
         });

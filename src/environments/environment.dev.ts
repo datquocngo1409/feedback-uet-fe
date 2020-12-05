@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'https://feedback-uet.herokuapp.com/'
+  apiUrl: 'http://apig7.toedu.me/'
 };

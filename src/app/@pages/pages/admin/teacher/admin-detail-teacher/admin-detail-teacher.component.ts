@@ -63,7 +63,7 @@ export class AdminDetailTeacherComponent implements OnInit {
 
   onSubmit() {
     if (this.ACTION === 'NEW') {
-      this.api.signup(this.formGroup.value).subscribe(next => {
+      this.api.signupTeacher(this.formGroup.value).subscribe(next => {
         this.router.navigate(['admin/teacher']);
       })
     } else {

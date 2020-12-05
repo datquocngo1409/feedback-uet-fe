@@ -11,10 +11,10 @@
             <form [formGroup]="formGroup" (ngSubmit)="onSubmit()" class="form">
                 <div fxLayout="row wrap" fxLayoutAlign="space-between center">
                     <mat-form-field class="form-element" fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
-                        <input matInput placeholder="{{'ADMIN.MSSV' | translate}}" formControlName="code">
+                        <input matInput placeholder="{{'ADMIN.Code' | translate}}" formControlName="code">
                         <mat-error
                                 *ngIf="!formGroup.controls['code'].valid && formGroup.controls['code'].touched">
-                            {{'ADMIN.MSSV' | translate}} {{'ERROR.IsRequired' | translate}}
+                            {{'ADMIN.Code' | translate}} {{'ERROR.IsRequired' | translate}}
                         </mat-error>
                     </mat-form-field>
                 </div>
