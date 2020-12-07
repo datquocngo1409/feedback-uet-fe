@@ -4,6 +4,7 @@
       "IsInvalid": "est invalide"
    },
    "NAVBAR" : {
+      "Home": "Page d'accueil",
       "Account": "Compte",
       "Setting": "Réglage",
       "Subject": "Matière",
@@ -19,6 +20,20 @@
       "Statistical": "Statistique",
       "Admin": "Administrateur",
       "Student": "Étudiant"
+   },
+   "HOME": {
+      "DevelopedByGroup7": "Développé par Group 7",
+      "RatingSubject": "Sujet de l'évaluation",
+      "StoryAboutUs": "Histoire de nous",
+      "MembersOfGroup7": "Membres du groupe 7",
+      "LEADER": "CHEF",
+      "AboutMyApplication": "à propos de ma candidature",
+      "ThanksForTheSupports": "merci pour les supports",
+      "TEACHER": "PROF",
+      "SUPPORT DOMAIN": "DOMAINE DE SUPPORT",
+      "SUPPORT TO DEPLOY": "SOUTIEN AU DÉPLOIEMENT",
+      "ANOTHER SUPPORT": "UN AUTRE SOUTIEN",
+      "ALearningAidApplication": "Une application d'aide à l'apprentissage"
    },
    "SUBJECT": {
       "Subject": "Matière",

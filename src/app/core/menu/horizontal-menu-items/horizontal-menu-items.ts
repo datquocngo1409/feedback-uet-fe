@@ -25,6 +25,7 @@ export class HorizontalMenuItems {
             class: 'group-title',
             icon: '',
             children: [
+                {state: '', name: 'NAVBAR.Home', type: 'link'},
                 {state: 'account', name: 'NAVBAR.Account', type: 'link'},
                 {state: 'setting', name: 'NAVBAR.Setting', type: 'link'}
             ]

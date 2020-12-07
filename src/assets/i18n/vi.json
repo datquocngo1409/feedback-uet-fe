@@ -4,6 +4,7 @@
       "IsInvalid": "sai định dạng"
    },
    "NAVBAR" : {
+      "Home": "Trang chủ",
       "Account": "Tài Khoản",
       "Setting": "Cài Đặt",
       "Subject": "Môn học",
@@ -19,6 +20,20 @@
       "Statistical": "Thống kê",
       "Admin": "Quản trị",
      "Student": "Sinh viên"
+   },
+   "HOME": {
+      "DevelopedByGroup7": "Phát triển bởi Nhóm 7",
+      "RatingSubject": "Đánh giá Môn học",
+      "StoryAboutUs": "Thông tin về chúng tôi",
+      "MembersOfGroup7": "Các thành viên Nhóm 7",
+      "LEADER": "NHÓM TRƯỞNG",
+      "AboutMyApplication": "THÔNG TIN VỀ ỨNG DỤNG",
+      "ThanksForTheSupports": "CẢM ƠN SỰ HỖ TRỢ",
+      "TEACHER": "GIẢNG VIÊN",
+      "SUPPORT DOMAIN": "HỖ TRỢ DOMAIN",
+      "SUPPORT TO DEPLOY": "HỖ TRỢ DEPLOY",
+      "ANOTHER SUPPORT": "CÁC SỰ HỖ TRỢ KHÁC",
+      "ALearningAidApplication": "Ứng dụng hỗ trợ giáo dục"
    },
    "SUBJECT": {
       "Subject": "Môn học",

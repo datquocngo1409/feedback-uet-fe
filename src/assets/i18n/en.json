@@ -4,6 +4,7 @@
     "IsInvalid": "is invalid"
   },
   "NAVBAR": {
+    "Home": "Home page",
     "Account": "Account",
     "Setting": "Setting",
     "Subject": "Subject",
@@ -26,6 +27,20 @@
     "Submit": "Submit",
     "Comment": "Comment",
     "New": "New"
+  },
+  "HOME": {
+    "DevelopedByGroup7": "Developed by Group 7",
+    "RatingSubject": "Rating Subject",
+    "StoryAboutUs": "Story about us",
+    "MembersOfGroup7": "Members of Group 7",
+    "LEADER": "LEADER",
+    "AboutMyApplication": "about my application",
+    "ThanksForTheSupports": "thanks for the supports",
+    "TEACHER": "TEACHER",
+    "SUPPORT DOMAIN": "SUPPORT DOMAIN",
+    "SUPPORT TO DEPLOY": "SUPPORT TO DEPLOY",
+    "ANOTHER SUPPORT": "ANOTHER SUPPORT",
+    "ALearningAidApplication": "A learning aid application"
   },
   "SUBJECT": {
     "Subject": "Subject",

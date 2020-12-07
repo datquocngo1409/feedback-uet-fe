@@ -24,7 +24,7 @@ import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {AgmCoreModule} from '@agm/core';
 // import { EasyPieChartModule } from 'ng2modules-easypiechart';
 import {NgxEasypiechartModule} from 'ngx-easypiechart';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateModule} from '@ngx-translate/core';
 
 import {DashboardRoutes} from './dashboard.routing';
 

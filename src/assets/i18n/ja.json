@@ -4,6 +4,7 @@
       "IsInvalid": "無効です"
    },
    "NAVBAR" : {
+      "Home": "ホームページ",
       "Account": "アカウント",
       "Setting": "設定",
       "Subject": "件名",
@@ -26,6 +27,20 @@
       "Submit": "参加する",
       "Comment": "コメント",
       "New": "新着"
+   },
+   "HOME": {
+      "DevelopedByGroup7": "グループ7によって開発されました",
+      "RatingSubject": "評価対象",
+      "StoryAboutUs": "私たちについての話",
+      "MembersOfGroup7": "グループ7のメンバー",
+      "LEADER": "盟主",
+      "AboutMyApplication": "私のアプリケーションについて",
+      "ThanksForTheSupports": "サポートに感謝します",
+      "TEACHER": "先生",
+      "SUPPORT DOMAIN": "サポートドメイン",
+      "SUPPORT TO DEPLOY": "展開のサポート",
+      "ANOTHER SUPPORT": "別のサポート",
+      "ALearningAidApplication": "学習支援アプリケーション"
    },
    "SUBJECT": {
       "Subject": "件名",

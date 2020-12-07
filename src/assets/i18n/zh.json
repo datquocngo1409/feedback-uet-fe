@@ -4,6 +4,7 @@
       "IsInvalid": "是无效的"
    },
    "NAVBAR" : {
+      "Home": "主页",
       "Account": "帐户",
       "Setting": "设置",
       "Subject": "学科",
@@ -19,6 +20,20 @@
       "Statistical": "统计",
       "Admin": "管理员",
       "Student": "学生"
+   },
+   "HOME": {
+      "DevelopedByGroup7": "由第7组开发",
+      "RatingSubject": "评分主题",
+      "StoryAboutUs": "关于我们的故事",
+      "MembersOfGroup7": "第7组成员",
+      "LEADER": "领导",
+      "AboutMyApplication": "关于我的申请",
+      "ThanksForTheSupports": "谢谢你的支持",
+      "TEACHER": "老师",
+      "SUPPORT DOMAIN": "支持范围",
+      "SUPPORT TO DEPLOY": "支持部署",
+      "ANOTHER SUPPORT": "另一个支持",
+      "ALearningAidApplication": "学习辅助应用"
    },
    "SUBJECT": {
       "Subject": "学科",
