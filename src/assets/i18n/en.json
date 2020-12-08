@@ -45,6 +45,8 @@
   "SUBJECT": {
     "Subject": "Subject",
     "SubjectList": "Subject List",
+    "RatedSubjectList": "Rated Subject List",
+    "NotRatedSubjectList": "Not Rated Subject List",
     "SubjectInfomation": "Subject Infomation",
     "Code": "Code",
     "Name": "Name",
@@ -59,6 +61,8 @@
   },
   "TEACHER": {
     "TeacherList": "Teacher List",
+    "RatedTeacherList": "Rated Teacher List",
+    "NotRatedTeacherList": "Not Rated Teacher List",
     "TeacherInformation": "Teacher Information",
     "TEACHER": "TEACHER",
     "Teacher": "Teacher",

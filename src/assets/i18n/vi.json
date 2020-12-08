@@ -38,6 +38,8 @@
    "SUBJECT": {
       "Subject": "Môn học",
       "SubjectList": "Danh sách môn học",
+      "RatedSubjectList": "Danh sách môn học đã đánh giá",
+      "NotRatedSubjectList": "Danh sách môn học chưa đánh giá",
       "SubjectInfomation": "Thông tin môn học",
       "Code": "Mã môn học",
       "Name": "Tên môn học",
@@ -52,6 +54,10 @@
    },
    "TEACHER": {
       "TeacherList": "Danh sách Giảng viên",
+      "RatedTeacherList": "Danh sách giảng viên đã đánh giá",
+      "NotRatedTeacherList": "Danh sách giảng viên chưa đánh giá",
+      "RatedSubjectList": "Rated Subject List",
+      "NotRatedSubjectList": "Not Rated Subject List",
       "TeacherInformation": "Thông tin Giảng viên",
       "TEACHER": "GIẢNG VIÊN",
       "Teacher": "Giảng viên",

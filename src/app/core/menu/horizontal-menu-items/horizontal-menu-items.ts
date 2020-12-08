@@ -37,8 +37,6 @@ export class HorizontalMenuItems {
             icon: '',
             children: [
                 {state: 'subject/list', name: 'NAVBAR.Subject', type: 'link'},
-                {state: 'subject/your', name: 'NAVBAR.YourSubject', type: 'link'},
-                {state: 'subject/other', name: 'NAVBAR.OtherSubject', type: 'link'},
                 {state: 'subject/rated', name: 'NAVBAR.RatedSubject', type: 'link'},
                 {state: 'subject/not-rated', name: 'NAVBAR.NotRatedSubject', type: 'link'},
             ]
@@ -50,8 +48,6 @@ export class HorizontalMenuItems {
             icon: '',
             children: [
                 {state: 'teacher/list', name: 'NAVBAR.Teacher', type: 'link'},
-                {state: 'teacher/your', name: 'NAVBAR.YourTeacher', type: 'link'},
-                {state: 'teacher/other', name: 'NAVBAR.OtherTeacher', type: 'link'},
                 {state: 'teacher/rated', name: 'NAVBAR.RatedTeacher', type: 'link'},
                 {state: 'teacher/not-rated', name: 'NAVBAR.NotRatedTeacher', type: 'link'},
             ]

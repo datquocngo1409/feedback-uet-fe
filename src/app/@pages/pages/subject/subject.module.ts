@@ -12,6 +12,8 @@ import { DialogRateComponent } from './dialog/dialog-rate/dialog-rate.component'
 import {TranslateModule} from '@ngx-translate/core';
 import {RatingBigComponent} from '../../../core/rating-big/rating-big.component';
 import {MatButtonModule} from '@angular/material/button';
+import { RatedSubjectComponent } from './rated-subject/rated-subject.component';
+import { NotRatedSubjectComponent } from './not-rated-subject/not-rated-subject.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import {MatButtonModule} from '@angular/material/button';
         ListSubjectComponent,
         RatingComponent,
         RatingBigComponent,
-        DialogRateComponent
+        DialogRateComponent,
+        RatedSubjectComponent,
+        NotRatedSubjectComponent
     ],
     imports: [
         CommonModule,

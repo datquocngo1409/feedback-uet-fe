@@ -1,0 +1,29 @@
+<h3 class="header">{{"TEACHER.RatedTeacherList" | translate}}</h3>
+<div class="left-content">
+    <mat-card *ngFor="let teacher of ratedTeacher" (click)="viewDetail(teacher.id)">
+        <mat-card-header>
+            <mat-card-title>
+                <b>[{{'TEACHER.TEACHER' | translate}}] {{teacher.user.name}}</b>
+            </mat-card-title>
+            <div class="rating">
+                <ms-rating [rating]='teacher.rating' [itemId]='teacher.id' [isReadonly]="true"></ms-rating>
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="right-card-content">
+                <h6>{{'TEACHER.PhoneNumber' | translate}}: {{teacher.user.phone}}</h6>
+                <h6>{{'TEACHER.Email' | translate}}: {{teacher.user.email}}</h6>
+                <h6>{{'TEACHER.Age' | translate}}: {{teacher.user.age}}</h6>
+            </div>
+            <div class="left-card-content">
+                <img class="teacher-image" src="../../../../../assets/img/user-1.jpg">
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+<div class="right-content">
+    <div class="calendar-wrapper">
+        <mat-calendar #calendar [(selected)]="selectedDate">
+        </mat-calendar>
+    </div>
+</div>

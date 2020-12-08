@@ -45,6 +45,8 @@
    "SUBJECT": {
       "Subject": "件名",
       "SubjectList": "件名リスト",
+      "RatedSubjectList": "評価された主題リスト",
+      "NotRatedSubjectList": "未評価の件名リスト",
       "SubjectInfomation": "主題情報",
       "Code": "コード",
       "Name": "名前",
@@ -59,6 +61,8 @@
    },
    "TEACHER": {
       "TeacherList": "教師リスト",
+      "RatedTeacherList": "評価された教師リスト",
+      "NotRatedTeacherList": "評価されていない教師リスト",
       "TeacherInformation": "教師情報",
       "TEACHER": "先生",
       "Teacher": "先生",

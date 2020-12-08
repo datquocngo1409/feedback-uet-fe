@@ -37,6 +37,8 @@
    },
    "SUBJECT": {
       "Subject": "学科",
+      "RatedSubjectList": "额定科目清单",
+      "NotRatedSubjectList": "未评级主题列表",
       "SubjectList": "主题清单",
       "SubjectInfomation": "主题信息",
       "Code": "码",
@@ -52,6 +54,8 @@
    },
    "TEACHER": {
       "TeacherList": "教师名单",
+      "RatedTeacherList": "评分教师名单",
+      "NotRatedTeacherList": "未评分教师名单",
       "TeacherInformation": "老师信息",
       "TEACHER": "老师",
       "Teacher": "老师",

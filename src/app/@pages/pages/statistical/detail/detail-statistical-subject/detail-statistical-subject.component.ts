@@ -11,11 +11,15 @@ import * as HighCharts from 'highcharts';
 })
 export class DetailStatisticalSubjectComponent implements OnInit {
 
+    showDetail;
     subject;
     ratingSubjects;
-
     single: any[];
     view: any[] = [0, 0];
+    days = [];
+    dayDatas = [];
+    dataChart3: any[] = [];
+    single2: any[];
 
     // options
     gradient = true;
@@ -36,6 +40,7 @@ export class DetailStatisticalSubjectComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.showDetail = true;
         const id = +this.route.snapshot.paramMap.get('id');
         this.api.getSubjectById(id).subscribe(subject => {
             this.subject = subject;
@@ -54,6 +59,19 @@ export class DetailStatisticalSubjectComponent implements OnInit {
                     } else if (rs.point === 5) {
                         s5++;
                     }
+                    const day = rs.creationTime.substring(9);
+                    if (this.days.indexOf(day) < 0) {
+                        this.days.push(day);
+                        this.dayDatas.push(1);
+                    } else {
+                        this.dayDatas[this.days.indexOf(day)]++;
+                    }
+                }
+                for (const day of this.days) {
+                    this.dataChart3.push({
+                        name: day,
+                        value: this.dayDatas[this.days.indexOf(day)]
+                    })
                 }
                 this.single = [
                     {
@@ -77,6 +95,7 @@ export class DetailStatisticalSubjectComponent implements OnInit {
                         'value': s5
                     }
                 ];
+                this.single2 = this.dataChart3;
             });
         });
     }
@@ -103,5 +122,21 @@ export class DetailStatisticalSubjectComponent implements OnInit {
     }
 
     onDeactivate(data): void {
+    }
+
+    isShowDetailButton() {
+        if (this.showDetail) {
+            return 'right-30';
+        } else {
+            return 'right-0';
+        }
+    }
+
+    isShowDetail() {
+        if (!this.showDetail) {
+            return 'left';
+        } else {
+            return 'full-content';
+        }
     }
 }

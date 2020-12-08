@@ -38,6 +38,8 @@
    "SUBJECT": {
       "Subject": "Matière",
       "SubjectList": "Liste Des Sujets",
+      "RatedSubjectList": "Liste de sujets notés",
+      "NotRatedSubjectList": "Liste des sujets non notés",
       "SubjectInfomation": "Informations Sur Le Sujet",
       "Code": "Code",
       "Name": "Nom   ",
@@ -52,6 +54,8 @@
    },
    "TEACHER": {
       "TeacherList": "Liste des enseignants",
+      "RatedTeacherList": "Liste des enseignants notés",
+      "NotRatedTeacherList": "Liste des enseignants non notés",
       "TeacherInformation": "Information de l'enseignant",
       "TEACHER": "PROF",
       "Teacher": "Prof",

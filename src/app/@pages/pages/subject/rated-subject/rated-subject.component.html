@@ -1,0 +1,23 @@
+<h3 class="header">{{"SUBJECT.RatedSubjectList" | translate}}</h3>
+<div class="left-content">
+    <mat-card *ngFor="let subject of ratedSubjects" (click)="viewDetail(subject.id)">
+        <mat-card-header>
+            <mat-card-title>
+                <b>[{{subject.code}}] {{subject.name}}</b>
+            </mat-card-title>
+            <div class="rating">
+                <ms-rating [rating]='subject.rating' [itemId]='subject.id' [isReadonly]="true"></ms-rating>
+            </div>
+        </mat-card-header>
+        <mat-card-content>
+            <span class="teacher-in-subject">{{"SUBJECT.Teacher" | translate}}: {{subject.teacherName}}</span>
+            <span>{{"SUBJECT.Week" | translate}}: {{calculateWeek(subject.startDate)}}</span>
+        </mat-card-content>
+    </mat-card>
+</div>
+<div class="right-content">
+    <div class="calendar-wrapper">
+        <mat-calendar #calendar [(selected)]="selectedDate">
+        </mat-calendar>
+    </div>
+</div>

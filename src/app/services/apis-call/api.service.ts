@@ -134,4 +134,12 @@ export class API {
     repComment(data, parentId) {
         return this.http.post(environment.apiUrl + `comment/rep/` + parentId, data);
     }
+
+    getRatingSubject() {
+        return this.http.get(environment.apiUrl + `rating-subject`, {});
+    }
+
+    getRatingTeacher() {
+        return this.http.get(environment.apiUrl + `rating-teacher`, {});
+    }
 }
