@@ -3,6 +3,10 @@
       "IsRequired": "是必须的",
       "IsInvalid": "是无效的"
    },
+   "ALERT": {
+      "OnlyStudentCanRate": "只有学生可以评分",
+      "OnlyStudentCanComment": "只有学生可以发表评论"
+   },
    "NAVBAR" : {
       "Home": "主页",
       "Account": "帐户",

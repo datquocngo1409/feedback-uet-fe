@@ -3,6 +3,10 @@
     "IsRequired": "is required",
     "IsInvalid": "is invalid"
   },
+  "ALERT": {
+    "OnlyStudentCanRate": "Only Student can rate",
+    "OnlyStudentCanComment": "Only Student can comment"
+  },
   "NAVBAR": {
     "Home": "Home page",
     "Account": "Account",

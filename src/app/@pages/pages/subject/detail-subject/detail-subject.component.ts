@@ -180,6 +180,11 @@ export class DetailSubjectComponent implements OnInit {
     }
 
     repComment(id: any) {
+        const role = localStorage.getItem('role');
+        if (role !== 'STUDENT') {
+            alert(this.translate.instant('ALERT.OnlyStudentCanComment'));
+            return;
+        }
         // @ts-ignore
         const value = document.getElementById('commentRepTextArea-' + id).value;
         if (this.user === undefined) {
@@ -198,6 +203,11 @@ export class DetailSubjectComponent implements OnInit {
     }
 
     comment(value) {
+        const role = localStorage.getItem('role');
+        if (role !== 'STUDENT') {
+            alert(this.translate.instant('ALERT.OnlyStudentCanComment'));
+            return;
+        }
         if (this.user === undefined) {
             this.user = JSON.parse(localStorage.getItem('student'));
         }

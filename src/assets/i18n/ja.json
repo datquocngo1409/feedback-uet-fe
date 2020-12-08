@@ -3,6 +3,10 @@
       "IsRequired": "必要とされている",
       "IsInvalid": "無効です"
    },
+   "ALERT": {
+      "OnlyStudentCanRate": "学生だけが評価できます",
+      "OnlyStudentCanComment": "コメントできるのは学生だけです"
+   },
    "NAVBAR" : {
       "Home": "ホームページ",
       "Account": "アカウント",

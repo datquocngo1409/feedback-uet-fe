@@ -3,6 +3,10 @@
       "IsRequired": "không thể rỗng",
       "IsInvalid": "sai định dạng"
    },
+   "ALERT": {
+      "OnlyStudentCanRate": "Chỉ sinh viên mới được quyền đánh giá",
+      "OnlyStudentCanComment": "Chỉ sinh viên mới được quyền bình luận"
+   },
    "NAVBAR" : {
       "Home": "Trang chủ",
       "Account": "Tài Khoản",

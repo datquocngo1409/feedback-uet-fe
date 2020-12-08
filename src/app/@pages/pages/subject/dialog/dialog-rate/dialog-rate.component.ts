@@ -2,6 +2,7 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {API} from '../../../../../services/apis-call/api.service';
 import {Router} from '@angular/router';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
     selector: 'ms-dialog-rate',
@@ -15,6 +16,7 @@ export class DialogRateComponent implements OnInit {
     rating;
 
     constructor(
+        private translate: TranslateService,
         private router: Router,
         public api: API,
         public dialogRef: MatDialogRef<DialogRateComponent>,
@@ -52,6 +54,9 @@ export class DialogRateComponent implements OnInit {
                 this.router.navigate(['/subject/list']);
                 this.dialogRef.close();
             });
+        } else {
+            alert(this.translate.instant('ALERT.OnlyStudentCanRate'));
+            this.dialogRef.close();
         }
     }
 

@@ -3,6 +3,10 @@
       "IsRequired": "est requis",
       "IsInvalid": "est invalide"
    },
+   "ALERT": {
+      "OnlyStudentCanRate": "Seul l'étudiant peut évaluer",
+      "OnlyStudentCanComment": "Seul l'élève peut commenter"
+   },
    "NAVBAR" : {
       "Home": "Page d'accueil",
       "Account": "Compte",

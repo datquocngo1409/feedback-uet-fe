@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {API} from '../../../../services/apis-call/api.service';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
     selector: 'ms-detail-teacher',
@@ -16,7 +17,8 @@ export class DetailTeacherComponent implements OnInit {
     constructor(
         private router: Router,
         private route: ActivatedRoute,
-        private api: API
+        private api: API,
+        private translate: TranslateService
     ) {
     }
 
@@ -38,6 +40,8 @@ export class DetailTeacherComponent implements OnInit {
           this.api.rateTeacher(student.id, this.itemId, this.rating).subscribe(next => {
               this.router.navigate(['/teacher/list']);
           });
+      } else {
+          alert(this.translate.instant('ALERT.OnlyStudentCanRate'));
       }
   }
 
