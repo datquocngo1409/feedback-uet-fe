@@ -8,7 +8,6 @@ import {ApiService} from '../api-service/api.service';
 import {map} from 'rxjs/operators';
 import {merge} from 'rxjs';
 
-import * as MenuConfig from '../../../assets/data/menu.json';
 import {HorizontalMenuItems} from 'app/core/menu/horizontal-menu-items/horizontal-menu-items';
 import {TranslateService} from '@ngx-translate/core';
 
