@@ -46,6 +46,14 @@ export class DetailStatisticalSubjectComponent implements OnInit {
             this.subject = subject;
             this.api.getRatingSubjectBySubjectId(this.subject.id).subscribe(ratingSubjects => {
                 this.ratingSubjects = ratingSubjects;
+                this.ratingSubjects.sort(function(a, b) {
+                    const keyA = a.point,
+                        keyB = b.point;
+                    // Compare the 2 dates
+                    if (keyA > keyB) { return -1; }
+                    if (keyA < keyB) { return 1; }
+                    return 0;
+                });
                 let s1 = 0, s2 = 0, s3 = 0, s4 = 0, s5 = 0;
                 for (const rs of this.ratingSubjects) {
                     if (rs.point === 1) {
@@ -95,6 +103,14 @@ export class DetailStatisticalSubjectComponent implements OnInit {
                         'value': s5
                     }
                 ];
+                this.dataChart3.sort(function(a, b) {
+                    const keyA = new Date(a.name),
+                        keyB = new Date(b.name);
+                    // Compare the 2 dates
+                    if (keyA < keyB) { return -1; }
+                    if (keyA > keyB) { return 1; }
+                    return 0;
+                });
                 this.single2 = this.dataChart3;
             });
         });
@@ -109,7 +125,7 @@ export class DetailStatisticalSubjectComponent implements OnInit {
             startDateDate.setFullYear(data[2]);
             const miliseconds = 15 * 7 * 24 * 3600 * 1000;
             const endDate = new Date(startDateDate.getTime() + miliseconds);
-            return endDate.getDate() + '/' + endDate.getMonth() + 1 + '/' + endDate.getFullYear();
+            return endDate.getDate() + '/' + (endDate.getMonth() + 1) + '/' + endDate.getFullYear();
         } else {
             return null;
         }

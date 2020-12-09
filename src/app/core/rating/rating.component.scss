@@ -31,12 +31,12 @@
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
-  color: gold;
+  //color: gold;
 }
 
 
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
-  color: #ea0;
+  //color: #ea0;
 }

@@ -26,6 +26,8 @@ export class DetailTeacherComponent implements OnInit {
         const id = +this.route.snapshot.paramMap.get('id');
         this.api.getTeacherByIdFull(id).subscribe(teacher => {
           this.teacher = teacher;
+          this.itemId = this.teacher.id;
+          this.rating = this.teacher.rating.toFixed(0);
         })
     }
 

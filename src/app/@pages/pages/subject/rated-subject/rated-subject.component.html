@@ -1,5 +1,6 @@
 <h3 class="header">{{"SUBJECT.RatedSubjectList" | translate}}</h3>
 <div class="left-content">
+    <span *ngIf="ratedSubjects.length === 0">No Data</span>
     <mat-card *ngFor="let subject of ratedSubjects" (click)="viewDetail(subject.id)">
         <mat-card-header>
             <mat-card-title>

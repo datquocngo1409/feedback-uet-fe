@@ -145,7 +145,7 @@ export class DetailSubjectComponent implements OnInit {
             startDateDate.setFullYear(data[2]);
             const miliseconds = 15 * 7 * 24 * 3600 * 1000;
             const endDate = new Date(startDateDate.getTime() + miliseconds);
-            return endDate.getDate() + '/' + endDate.getMonth() + 1 + '/' + endDate.getFullYear();
+            return endDate.getDate() + '/' + (endDate.getMonth() + 1) + '/' + endDate.getFullYear();
         } else {
             return null;
         }

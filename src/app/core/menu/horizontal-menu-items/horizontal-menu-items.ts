@@ -26,8 +26,8 @@ export class HorizontalMenuItems {
             icon: '',
             children: [
                 {state: '', name: 'NAVBAR.Home', type: 'link'},
-                {state: 'account', name: 'NAVBAR.Account', type: 'link'},
-                {state: 'setting', name: 'NAVBAR.Setting', type: 'link'}
+                // {state: 'core/account', name: 'NAVBAR.Account', type: 'link'},
+                // {state: 'core/setting', name: 'NAVBAR.Setting', type: 'link'}
             ]
         },
         {

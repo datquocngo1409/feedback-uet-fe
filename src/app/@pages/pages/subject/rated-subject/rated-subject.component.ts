@@ -29,21 +29,25 @@ export class RatedSubjectComponent implements OnInit {
 
     ngOnInit(): void {
         this.subjectService.getList().subscribe(data => {
-            this.student = JSON.parse(localStorage.getItem('student'));
             this.subjects = data;
-            this.api.getRatingSubject().subscribe(rating => {
-                this.ratings = rating;
-                for (const r of this.ratings) {
-                    if (r.studentId === this.student.id) {
-                        this.subjectWhichStudentRatedIds.push(r.subjectId);
+            if (localStorage.getItem('role') === 'STUDENT') {
+                this.student = JSON.parse(localStorage.getItem('student'));
+                this.api.getRatingSubject().subscribe(rating => {
+                    this.ratings = rating;
+                    for (const r of this.ratings) {
+                        if (r.studentId === this.student.id) {
+                            this.subjectWhichStudentRatedIds.push(r.subjectId);
+                        }
                     }
-                }
-                for (const subject of this.subjects) {
-                    if (this.subjectWhichStudentRatedIds.indexOf(subject.id) >= 0) {
-                        this.ratedSubjects.push(subject);
+                    for (const subject of this.subjects) {
+                        if (this.subjectWhichStudentRatedIds.indexOf(subject.id) >= 0) {
+                            this.ratedSubjects.push(subject);
+                        }
                     }
-                }
-            });
+                });
+            } else {
+                this.ratedSubjects = [];
+            }
         });
     }
 

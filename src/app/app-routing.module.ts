@@ -38,6 +38,9 @@ const appRoutes: Routes = [
                 path: 'admin', loadChildren: () => import('./@pages/pages/admin/admin.module').then(m => m.AdminModule)
             },
             {
+                path: 'core', loadChildren: () => import('./@pages/pages/core/core.module').then(m => m.CoreModule)
+            },
+            {
                 path: 'test',
                 component: TestComponent
             }
