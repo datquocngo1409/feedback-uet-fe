@@ -1,7 +1,7 @@
 <div class="main">
     <div [ngClass]="isShowDetail()">
         <h3 class="header">
-            <b>[{{subject.code}}] {{subject.name}}</b>
+            <b>[{{subject?.code}}] {{subject?.name}}</b>
             <div [ngClass]="isShowDetailButton()">
                 <span *ngIf="showDetail" (click)="showDetail = !showDetail" class="material-icons">
                     open_in_new
@@ -38,22 +38,22 @@
             <b>{{"SUBJECT.SubjectInfomation" | translate}}: </b>
         </h4>
         <h5 class="field">
-            <b>{{"SUBJECT.Code" | translate}}: </b> {{subject.code}}
+            <b>{{"SUBJECT.Code" | translate}}: </b> {{subject?.code}}
         </h5>
         <h5 class="field">
-            <b>{{"SUBJECT.Name" | translate}}: </b> {{subject.name}}
+            <b>{{"SUBJECT.Name" | translate}}: </b> {{subject?.name}}
         </h5>
         <h5 class="field">
-            <b>{{"SUBJECT.Teacher" | translate}}: </b> {{subject.teacherName}}
+            <b>{{"SUBJECT.Teacher" | translate}}: </b> {{subject?.teacherName}}
         </h5>
         <h5 class="field">
-            <b>{{"SUBJECT.StartDate" | translate}} </b> {{subject.startDate}}
+            <b>{{"SUBJECT.StartDate" | translate}} </b> {{subject?.startDate}}
         </h5>
         <h5 class="field">
-            <b>{{"SUBJECT.EndDate" | translate}}: </b> {{getEndDate(subject.startDate)}}
+            <b>{{"SUBJECT.EndDate" | translate}}: </b> {{getEndDate(subject?.startDate)}}
         </h5>
         <h5 class="field">
-            <ms-rating (click)="openDialog()" [rating]='subject.rating' [itemId]='subject.id'
+            <ms-rating (click)="openDialog()" [rating]='subject?.rating' [itemId]='subject?.id'
                        [isReadonly]="true"></ms-rating>
         </h5>
         <h5 class="button-show-comment field">

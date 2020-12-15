@@ -12,26 +12,26 @@
             </div>
         </h3>
         <h4 class="field">
-            <b>{{"SUBJECT.Code" | translate}}: </b> {{subject.code}}
+            <b>{{"SUBJECT.Code" | translate}}: </b> {{subject?.code}}
         </h4>
         <h4 class="field">
-            <b>{{"SUBJECT.Name" | translate}}: </b> {{subject.name}}
+            <b>{{"SUBJECT.Name" | translate}}: </b> {{subject?.name}}
         </h4>
         <h4 class="field">
-            <b>{{"SUBJECT.Teacher" | translate}}: </b> {{subject.teacherName}}
+            <b>{{"SUBJECT.Teacher" | translate}}: </b> {{subject?.teacherName}}
         </h4>
         <h4 class="field">
-            <b>{{"SUBJECT.StartDate" | translate}} </b> {{subject.startDate}}
+            <b>{{"SUBJECT.StartDate" | translate}} </b> {{subject?.startDate}}
         </h4>
         <h4 class="field">
-            <b>{{"SUBJECT.EndDate" | translate}}: </b> {{getEndDate(subject.startDate)}}
+            <b>{{"SUBJECT.EndDate" | translate}}: </b> {{getEndDate(subject?.startDate)}}
         </h4>
     </div>
     <div class="chart-container">
         <div class="rating-chart">
             <div class="center">
                 <circle-progress
-                        [percent]="subject.rating * 20"
+                        [percent]="subject?.rating * 20"
                         [radius]="100"
                         [outerStrokeWidth]="16"
                         [innerStrokeWidth]="8"
@@ -43,11 +43,11 @@
                         [titleFontSize]="'28'"
                         [subtitleFontSize]="'20'"
                         [units]="''"
-                        [subtitle]="subject.rating.toFixed(2) + '/5'"
+                        [subtitle]="subject?.rating.toFixed(2) + '/5'"
                 ></circle-progress>
             </div>
         </div>
-        <div class="detail-rating-chart" *ngIf="single.length > 0">
+        <div class="detail-rating-chart" *ngIf="single?.length > 0">
             <ngx-charts-pie-chart
                     [view]="view"
                     [scheme]="colorScheme"
@@ -64,7 +64,7 @@
             >
             </ngx-charts-pie-chart>
         </div>
-        <div class="day-rating-chart" *ngIf="single2.length > 0">
+        <div class="day-rating-chart" *ngIf="single2?.length > 0">
             <ngx-charts-bar-vertical
                     [view]="view"
                     [results]="single2"

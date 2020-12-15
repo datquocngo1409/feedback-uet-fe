@@ -48,7 +48,7 @@
 
             <ng-container matColumnDef="rating">
                 <mat-header-cell *matHeaderCellDef mat-sort-header>{{'ADMIN.RatingValue' | translate}}</mat-header-cell>
-                <mat-cell *matCellDef="let element"> {{element.rating }} </mat-cell>
+                <mat-cell *matCellDef="let element"> {{element.rating.toFixed(2) }} </mat-cell>
             </ng-container>
 
             <ng-container matColumnDef="ratingCount">

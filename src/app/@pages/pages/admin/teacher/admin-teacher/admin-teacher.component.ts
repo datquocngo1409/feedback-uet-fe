@@ -13,7 +13,7 @@ import {Router} from '@angular/router';
 })
 export class AdminTeacherComponent implements OnInit, AfterViewInit {
 
-    displayedColumns = ['name', 'username', 'age', 'address', 'email', 'phone', 'edit', 'delete'];
+    displayedColumns = ['name', 'username', 'age', 'address', 'email', 'phone', 'edit'];
     dataSource;
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort, {}) sort: MatSort;

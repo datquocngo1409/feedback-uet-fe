@@ -13,7 +13,7 @@ import {Router} from '@angular/router';
 })
 export class AdminStudentComponent implements OnInit, AfterViewInit {
 
-    displayedColumns = ['mssv', 'name', 'username', 'age', 'address', 'email', 'phone', 'edit', 'delete'];
+    displayedColumns = ['mssv', 'name', 'username', 'age', 'address', 'email', 'phone', 'edit'];
     dataSource;
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort, {}) sort: MatSort;
