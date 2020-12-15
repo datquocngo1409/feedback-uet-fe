@@ -14,7 +14,7 @@
                 <b>{{"TEACHER.Age" | translate}}: </b> {{teacher?.user?.age}}
             </h5>
             <div class="rating-container">
-                <ms-rating-big [rating]='teacher?.rating' [itemId]='teacher?.id' [isReadonly]="false" (ratingClick)="getRating($event)"></ms-rating-big>
+                <ms-rating-big [rating]='parseInt(teacher?.rating)' [itemId]='teacher?.id' [isReadonly]="false" (ratingClick)="getRating($event)"></ms-rating-big>
             </div>
         </div>
         <div class="detail-right-content">

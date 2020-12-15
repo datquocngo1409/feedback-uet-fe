@@ -53,7 +53,7 @@
             <b>{{"SUBJECT.EndDate" | translate}}: </b> {{getEndDate(subject?.startDate)}}
         </h5>
         <h5 class="field">
-            <ms-rating (click)="openDialog()" [rating]='subject?.rating' [itemId]='subject?.id'
+            <ms-rating (click)="openDialog()" [rating]='parseInt(subject?.rating)' [itemId]='subject?.id'
                        [isReadonly]="true"></ms-rating>
         </h5>
         <h5 class="button-show-comment field">
@@ -61,7 +61,7 @@
                   class="material-icons">keyboard_arrow_up</span>
             <span *ngIf="!showComment" (click)="showComment = !showComment"
                   class="material-icons">keyboard_arrow_down</span>
-            {{commentNotRepply.length}} {{"SUBJECT.Comments" | translate}}
+            {{commentNotRepply?.length}} {{"SUBJECT.Comments" | translate}}
         </h5>
         <div *ngIf="showComment" class="comment-content">
             <mat-card *ngFor="let comment of commentNotRepply">

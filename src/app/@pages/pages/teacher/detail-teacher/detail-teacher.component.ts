@@ -51,4 +51,8 @@ export class DetailTeacherComponent implements OnInit {
       this.rating = value.rating;
       this.itemId = value.itemId;
   }
+
+    parseInt(rating) {
+        return parseInt(rating, 10);
+    }
 }

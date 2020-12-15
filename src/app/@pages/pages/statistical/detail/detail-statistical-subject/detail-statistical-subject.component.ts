@@ -104,8 +104,14 @@ export class DetailStatisticalSubjectComponent implements OnInit {
                     }
                 ];
                 this.dataChart3.sort(function(a, b) {
-                    const keyA = new Date(a.name),
-                        keyB = new Date(b.name);
+                    const aDay = a.name.substring(0, 2);
+                    const aMonth = a.name.substring(3, 5);
+                    const aYear = a.name.substr(6);
+                    const bDay = b.name.substring(0, 2);
+                    const bMonth = b.name.substring(3, 5);
+                    const bYear = b.name.substr(6);
+                    const keyA = new Date(aYear, aMonth, aDay),
+                        keyB = new Date(bYear, bMonth, bDay);
                     // Compare the 2 dates
                     if (keyA < keyB) { return -1; }
                     if (keyA > keyB) { return 1; }

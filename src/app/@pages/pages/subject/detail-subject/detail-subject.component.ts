@@ -221,4 +221,8 @@ export class DetailSubjectComponent implements OnInit {
             this.getData();
         });
     }
+
+    parseInt(rating) {
+        return parseInt(rating, 10);
+    }
 }
